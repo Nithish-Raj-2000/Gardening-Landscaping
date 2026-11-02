@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Workspace Page Not Found — Stackly Gardens</title>
+  <meta name="description" content="This workspace path does not exist. Return to your Stackly garden dashboard.">
+  <meta name="theme-color" content="#183326">
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/webp" href="assets/img/logo.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Manrope:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <link rel="stylesheet" href="assets/css/hover.css">
+</head>
+<body data-page="404dash">
+  <main class="error-page error-page--dash" id="main" data-error-page>
+    <div class="error-bg-wrap" aria-hidden="true">
+      <img class="error-bg" src="assets/img/garden-forest.webp" alt="" width="1400" height="1050" loading="eager" decoding="async">
+      <div class="error-bg-overlay"></div>
+      <div class="error-bg-glow error-bg-glow--sage"></div>
+    </div>
+
+    <div class="container error-container">
+      <div class="error-shell">
+
+        <div class="error-grid">
+          <div class="error-content">
+            <div class="error-kicker">
+              <span class="eyebrow eyebrow--light">Workspace · not planted</span>
+            </div>
+            <div class="error-code" data-code="404" aria-hidden="true">404</div>
+            <h1 class="error-title">That garden bed <em>isn't here.</em></h1>
+            <p class="error-lead">This part of your workspace hasn't been built yet, or the link has grown over. Your dashboard and garden records are safe — step back and carry on.</p>
+
+            <div class="button-row">
+              <button class="button" type="button" data-go-back><svg class="icon" aria-hidden="true"><use href="#i-arrowLeft"></use></svg> Go back</button>
+              <a class="button button--ghost" href="customer-dashboard.html#sec-overview" data-dashboard-return><svg class="icon" aria-hidden="true"><use href="#i-grid"></use></svg> Back to dashboard</a>
+            </div>
+
+            <nav class="error-nav" aria-label="Useful ways back" style="display:none">
+              <span class="error-nav-label">Useful ways back</span>
+              <div class="error-nav-links">
+                <a href="login.html" data-dashboard-return><svg class="icon" aria-hidden="true"><use href="#i-grid"></use></svg> Dashboard</a>
+                <a href="index.html"><svg class="icon" aria-hidden="true"><use href="#i-home"></use></svg> Public site</a>
+              </div>
+            </nav>
+          </div>
+
+          <div class="error-visual" aria-hidden="true">
+            <div class="error-frame error-frame--tall">
+              <img src="assets/img/greenhouse-plants.webp" alt="" width="900" height="1125" loading="lazy" decoding="async">
+              <div class="error-frame-overlay"></div>
+            </div>
+            <svg class="error-ornament error-ornament--one" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+              <path d="M60 118c0-42 0-84-36-108"/>
+              <path d="M60 92c-24-2-36-20-38-44 22 2 36 18 38 44Z"/>
+              <path d="M60 66c24-1 38-17 42-40-24 1-38 16-42 40Z"/>
+            </svg>
+            <svg class="error-ornament error-ornament--two" viewBox="0 0 80 100" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+              <path d="M40 98C40 64 38 34 18 8"/>
+              <path d="M39 74C22 72 12 58 12 40c18 2 27 15 27 34Z"/>
+              <path d="M40 56c17-2 27-15 27-33-17 2-26 15-27 33Z"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="assets/js/site.js"></script>
+</body>
+</html>
+

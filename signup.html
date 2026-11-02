@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create Account — Stackly Gardens &amp; Landscaping</title>
+  <meta name="description" content="Create a Stackly garden account to follow your garden's care plan, visits, invoices and seasonal notes. Demo experience only.">
+  <meta name="theme-color" content="#183326">
+  <link rel="icon" type="image/webp" href="assets/img/logo.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Manrope:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <link rel="stylesheet" href="assets/css/hover.css">
+</head>
+<body data-page="signup">
+  <main class="auth-page" id="main">
+    <!-- ================= VISUAL ================= -->
+    <section class="auth-visual" aria-labelledby="auth-visual-title">
+      <img class="auth-bg" src="assets/img/garden-estate.webp" alt="A mature estate garden with clipped hedges and a long stone path" width="1400" height="787" fetchpriority="high" decoding="async">
+      <img class="auth-veil" src="assets/img/botanical-drift.webp" alt="" width="420" height="420" loading="lazy" decoding="async">
+
+      <div class="auth-top">
+        <a class="auth-back" href="index.html"><svg class="icon" aria-hidden="true"><use href="#i-arrowLeft"></use></svg> Back to the garden</a>
+        <a class="auth-brand" href="index.html" aria-label="Stackly Gardens and Landscaping — home">
+          <span class="brand-mark"><img src="assets/img/logo.webp" alt="" width="25" height="25"></span>
+          <b>STACKLY</b>
+        </a>
+      </div>
+
+      <div class="auth-quote">
+        <p>“A garden is never finished. Your workspace should keep up with it.”</p>
+        <span>James Whitfield · Head of horticulture</span>
+      </div>
+
+      <div class="auth-visual-content">
+        <span class="eyebrow eyebrow--light">Join the garden</span>
+        <h1 id="auth-visual-title">Keep every season <em>close at hand.</em></h1>
+        <p>Create an account to follow your garden's progress, plan visits and keep the studio's seasonal notes in one place.</p>
+        <div class="auth-visual-stats">
+          <div><b>96%</b><span>Stay past year three</span></div>
+          <div><b>12</b><span>Garden specialists</span></div>
+          <div><b>1</b><span>Place for everything</span></div>
+        </div>
+        <span class="auth-visual-mobile-note"><svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg> A private demonstration workspace. No real data is collected.</span>
+      </div>
+    </section>
+
+    <!-- ================= PANEL ================= -->
+    <section class="auth-panel" aria-labelledby="auth-title">
+      <div class="auth-panel-inner">
+        <div class="auth-panel-head">
+          <a class="auth-brand-mobile" href="index.html" aria-label="Stackly Gardens and Landscaping — home">
+            <span class="brand-mark"><img src="assets/img/logo.webp" alt="" width="24" height="24"></span>
+            <b>STACKLY</b>
+          </a>
+          <div class="auth-switch" role="group" aria-label="Account access">
+            <a href="login.html">Log in</a>
+            <a class="is-active" href="signup.html" aria-current="page">Sign up</a>
+          </div>
+        </div>
+
+        <h2 id="auth-title">Create your <em>garden account.</em></h2>
+        <p class="auth-sub">A few details, a strong password, and your workspace is ready. Demo only — nothing leaves your browser.</p>
+
+        <form class="auth-form" id="signup-form" novalidate>
+          <div class="form-grid form-grid--two">
+            <div class="field">
+              <label class="form-label" for="signup-name">Full name <span class="req">*</span></label>
+              <input class="input" id="signup-name" name="name" type="text" autocomplete="name" placeholder="Eleanor Hart" data-validate="name" required aria-describedby="signup-name-error">
+              <p class="field-error" id="signup-name-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label class="form-label" for="signup-phone">Phone number <span class="req">*</span></label>
+              <input class="input" id="signup-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="555 014 2208" data-validate="phone" required aria-describedby="signup-phone-error">
+              <p class="field-error" id="signup-phone-error" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="form-label" for="signup-email">Email address <span class="req">*</span></label>
+            <input class="input" id="signup-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" data-validate="email" required aria-describedby="signup-email-error">
+            <p class="field-error" id="signup-email-error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <span class="form-label" id="signup-role-label">Account type</span>
+            <div class="role-switch" role="radiogroup" aria-labelledby="signup-role-label">
+              <label class="role-opt">
+                <input type="radio" name="role" value="customer" checked>
+                <i><svg class="icon" aria-hidden="true"><use href="#i-user"></use></svg></i>
+                <span><b>Customer</b><small>Garden client</small></span>
+              </label>
+              <label class="role-opt">
+                <input type="radio" name="role" value="admin">
+                <i><svg class="icon" aria-hidden="true"><use href="#i-grid"></use></svg></i>
+                <span><b>Admin</b><small>Studio team</small></span>
+              </label>
+            </div>
+            <p class="field-error" aria-live="polite"></p>
+          </div>
+
+          <div class="form-grid form-grid--two">
+            <div class="field">
+              <label class="form-label" for="signup-password">Password <span class="req">*</span></label>
+              <div class="password-wrap">
+                <input class="input" id="signup-password" name="password" type="password" autocomplete="new-password" placeholder="At least 8 characters" data-validate="password" required aria-describedby="signup-password-error">
+                <button class="pass-toggle" type="button" data-password-toggle="signup-password" aria-label="Show password" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg></button>
+              </div>
+              <div class="strength" data-strength="signup-password" data-level="0">
+                <div class="strength-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+                <span class="strength-label">8+ characters, uppercase and a number</span>
+              </div>
+              <p class="field-error" id="signup-password-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label class="form-label" for="signup-confirm">Confirm password <span class="req">*</span></label>
+              <div class="password-wrap">
+                <input class="input" id="signup-confirm" name="confirm" type="password" autocomplete="new-password" placeholder="Repeat your password" data-validate="confirm" required aria-describedby="signup-confirm-error">
+                <button class="pass-toggle" type="button" data-password-toggle="signup-confirm" aria-label="Show password" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg></button>
+              </div>
+              <div class="strength strength--spacer" aria-hidden="true">
+                <div class="strength-bars"><i></i><i></i><i></i><i></i></div>
+                <span class="strength-label">Use the same password</span>
+              </div>
+              <p class="field-error" id="signup-confirm-error" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="check-chip">
+              <input type="checkbox" name="terms" required aria-describedby="signup-terms-error">
+              <span>I agree to the demonstration <a href="404.html">terms</a> and <a href="404.html">privacy note</a>. I understand no real account or data is created.</span>
+            </label>
+            <p class="field-error" id="signup-terms-error" aria-live="polite"></p>
+          </div>
+
+          <button class="button auth-submit button--block" type="submit">Create my account <svg class="icon" aria-hidden="true"><use href="#i-arrowRight"></use></svg></button>
+
+          <p class="demo-note" style="text-align:center">You will be taken to the sign-in page to open your new workspace.</p>
+
+          <div class="auth-security">
+            <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg>
+            Passwords are hashed and stored only in this browser for the demo.
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/site.js"></script>
+</body>
+</html>
+

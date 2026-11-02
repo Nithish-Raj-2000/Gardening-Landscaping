@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Studio Workspace — Stackly Gardens &amp; Landscaping</title>
+  <meta name="description" content="Stackly studio administration: jobs, projects, schedule, clients, services, reports and settings.">
+  <meta name="theme-color" content="#183326">
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/webp" href="assets/img/logo.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Manrope:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+  <link rel="stylesheet" href="assets/css/hover.css">
+</head>
+<body class="dash-body" data-page="admin">
+  <div class="dash" data-dashboard>
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="dash-side" aria-label="Workspace navigation">
+      <div class="dash-brand-row">
+        <a class="dash-brand" href="admin-dashboard.html">
+          <span class="dash-brand-mark"><img src="assets/img/logo.webp" alt="Stackly" width="40" height="40"></span>
+          <span class="dash-brand-text"><b>STACKLY</b></span>
+        </a>
+        <button class="dash-side-close" type="button" data-sidebar-close aria-label="Close navigation">
+          <svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>
+        </button>
+      </div>
+
+      <nav class="dash-nav" data-dash-nav aria-label="Workspace sections"></nav>
+
+      <div class="dash-side-foot">
+        <div class="dash-pro-card">
+          <span class="eyebrow eyebrow--light">Studio note</span>
+          <strong>Spring planting week</strong>
+          <p>Four gardens break ground from Monday. Confirm plant deliveries and the irrigation commissioning slot.</p>
+          <button class="button" type="button" data-dash-goto="sec-schedule">Open the schedule</button>
+        </div>
+        <div class="dash-user-card">
+          <span class="avatar" data-user-initials>EH</span>
+          <div style="min-width:0"><b data-user-name>Eleanor Hart</b><span data-role-name>Administrator</span><span data-user-email>admin@stackly.demo</span></div>
+          <button class="dash-signout" type="button" data-logout aria-label="Sign out">
+            <svg class="icon" aria-hidden="true"><use href="#i-logOut"></use></svg>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <div class="dash-overlay" data-sidebar-overlay></div>
+
+    <!-- ================= MAIN ================= -->
+    <div class="dash-main">
+      <header class="dash-top">
+        <button class="dash-menu-btn" type="button" data-sidebar-toggle aria-label="Open navigation" aria-expanded="false">
+          <svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg>
+        </button>
+        <div class="dash-crumb">
+          <span>Workspace <svg class="icon" aria-hidden="true"><use href="#i-chevronRight"></use></svg></span>
+          <b data-crumb-title>Overview</b>
+        </div>
+        <div class="dash-top-actions">
+          <button class="dash-icon-btn" type="button" data-dash-404 aria-label="Search the workspace">
+            <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>
+          </button>
+          <button class="dash-icon-btn" type="button" data-dash-404 aria-label="Notifications">
+            <svg class="icon" aria-hidden="true"><use href="#i-bell"></use></svg><span class="dot" aria-hidden="true"></span>
+          </button>
+        </div>
+      </header>
+
+      <main class="dash-content">
+        <!-- ================= OVERVIEW ================= -->
+        <section class="dash-section is-active" id="sec-overview" aria-labelledby="overview-title">
+          <div class="dash-page-head">
+            <div>
+              <span class="eyebrow">Studio overview</span>
+              <h1 id="overview-title"><span data-greeting>Good morning</span>, <em>Eleanor.</em></h1>
+              <p>Five gardens are in active care this week. The Willow House planting review is at 08:30, and two new enquiries are waiting for a first call.</p>
+            </div>
+            <div class="dash-head-actions">
+              <button class="button button--dark" type="button" data-dash-404>New job <svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg></button>
+              <button class="button button--outline" type="button" data-dash-404>Export week</button>
+            </div>
+          </div>
+
+          <div class="kpi-grid">
+            <article class="kpi">
+              <div class="kpi-top">
+                <span class="kpi-ico kpi-ico--gold"><svg class="icon" aria-hidden="true"><use href="#i-sprout"></use></svg></span>
+                <span class="kpi-trend"><svg class="icon" aria-hidden="true"><use href="#i-trendingUp"></use></svg> 12%</span>
+              </div>
+              <strong><span data-count="18">0</span></strong>
+              <span>Active jobs this week</span>
+              <div class="kpi-foot"><b>5</b> due today</div>
+            </article>
+            <article class="kpi">
+              <div class="kpi-top">
+                <span class="kpi-ico kpi-ico--info"><svg class="icon" aria-hidden="true"><use href="#i-layers"></use></svg></span>
+                <span class="kpi-trend"><svg class="icon" aria-hidden="true"><use href="#i-trendingUp"></use></svg> 3 new</span>
+              </div>
+              <strong><span data-count="7">0</span></strong>
+              <span>Live design projects</span>
+              <div class="kpi-foot"><b>2</b> at concept stage</div>
+            </article>
+            <article class="kpi">
+              <div class="kpi-top">
+                <span class="kpi-ico"><svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg></span>
+                <span class="kpi-trend"><svg class="icon" aria-hidden="true"><use href="#i-trendingUp"></use></svg> 94%</span>
+              </div>
+              <strong><span data-count="24">0</span></strong>
+              <span>Visits scheduled</span>
+              <div class="kpi-foot"><b>6</b> team members out</div>
+            </article>
+            <article class="kpi">
+              <div class="kpi-top">
+                <span class="kpi-ico kpi-ico--copper"><svg class="icon" aria-hidden="true"><use href="#i-wallet"></use></svg></span>
+                <span class="kpi-trend is-down"><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg> 2 late</span>
+              </div>
+              <strong>£<span data-count="48">0</span>k</strong>
+              <span>Invoiced this month</span>
+              <div class="kpi-foot"><b>£12.4k</b> awaiting payment</div>
+            </article>
+          </div>
+
+          <div class="dash-grid dash-grid--sidebar">
+            <section class="panel" aria-labelledby="overview-chart-title">
+              <div class="panel-head">
+                <div>
+                  <h2 id="overview-chart-title">Garden hours delivered</h2>
+                  <p>Billable care and build hours, last seven days</p>
+                </div>
+                <div class="panel-actions">
+                  <button class="dash-icon-btn" type="button" data-dash-404 aria-label="Chart options"><svg class="icon" aria-hidden="true"><use href="#i-more"></use></svg></button>
+                </div>
+              </div>
+              <div class="chart" role="img" aria-label="Garden hours delivered over the last seven days, peaking on Thursday">
+                <div class="chart-col"><span class="chart-bar" data-value="52"></span><span class="chart-label">Mon</span></div>
+                <div class="chart-col"><span class="chart-bar" data-value="66"></span><span class="chart-label">Tue</span></div>
+                <div class="chart-col"><span class="chart-bar" data-value="58"></span><span class="chart-label">Wed</span></div>
+                <div class="chart-col"><span class="chart-bar" data-value="88"></span><span class="chart-label">Thu</span></div>
+                <div class="chart-col"><span class="chart-bar" data-value="74"></span><span class="chart-label">Fri</span></div>
+                <div class="chart-col"><span class="chart-bar" data-value="36"></span><span class="chart-label">Sat</span></div>
+                <div class="chart-col"><span class="chart-bar" data-value="14"></span><span class="chart-label">Sun</span></div>
+              </div>
+              <div class="chart-legend">
+                <span><i></i> Care visits</span>
+                <span><i class="is-sage"></i> Build &amp; planting</span>
+              </div>
+            </section>
+
+            <section class="panel" aria-labelledby="today-title">
+              <div class="panel-head">
+                <div><h3 id="today-title">Today</h3><p>Thursday · 12 March</p></div>
+                <span class="badge badge--gold">3 visits</span>
+              </div>
+              <div class="appt-list">
+                <div class="appt">
+                  <div class="appt-date"><b>08</b><span>30 am</span></div>
+                  <div class="appt-copy"><b>The Willow House</b><span><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg> Planting review · EH</span></div>
+                  <span class="badge badge--gold">Now</span>
+                </div>
+                <div class="appt">
+                  <div class="appt-date"><b>11</b><span>00 am</span></div>
+                  <div class="appt-copy"><b>Hidcote Courtyard</b><span><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg> Border edit · RS</span></div>
+                  <span class="badge">Next</span>
+                </div>
+                <div class="appt">
+                  <div class="appt-date"><b>14</b><span>00 pm</span></div>
+                  <div class="appt-copy"><b>Meadow House</b><span><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg> Meadow cut · JW</span></div>
+                  <span class="badge badge--muted">Confirmed</span>
+                </div>
+                <div class="appt">
+                  <div class="appt-date"><b>16</b><span>30 pm</span></div>
+                  <div class="appt-copy"><b>New enquiry · Surrey</b><span><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg> First call · EH</span></div>
+                  <span class="badge badge--info">Call</span>
+                </div>
+              </div>
+              <div class="dash-note" style="margin-top:.8rem">
+                <svg class="icon" aria-hidden="true"><use href="#i-info"></use></svg>
+                <span>Allow 20 extra minutes for the Willow House review — the plant delivery is due on site.</span>
+              </div>
+            </section>
+          </div>
+
+          <div class="dash-grid dash-grid--2">
+            <section class="panel" aria-labelledby="week-jobs-title">
+              <div class="panel-head">
+                <div><h3 id="week-jobs-title">This week's jobs</h3><p>Five of eighteen shown</p></div>
+                <button class="text-link" type="button" data-dash-goto="sec-jobs">All jobs <svg class="icon" aria-hidden="true"><use href="#i-arrowRight"></use></svg></button>
+              </div>
+              <div class="table-wrap" tabindex="0" role="region" aria-label="This week's jobs table">
+                <table class="dash-table">
+                  <thead><tr><th scope="col">Garden</th><th scope="col">Status</th><th scope="col">Due</th></tr></thead>
+                  <tbody>
+                    <tr><td><div class="cell-main"><img src="assets/img/garden-estate.webp" alt="" width="34" height="34" loading="lazy"><div><b>Willow House</b><span>Planting review</span></div></div></td><td><span class="badge badge--gold">In progress</span></td><td class="num">Today</td></tr>
+                    <tr><td><div class="cell-main"><img src="assets/img/garden-hidcote.webp" alt="" width="34" height="34" loading="lazy"><div><b>Hidcote Courtyard</b><span>Border edit</span></div></div></td><td><span class="badge">Scheduled</span></td><td class="num">Today</td></tr>
+                    <tr><td><div class="cell-main"><img src="assets/img/garden-meadow.webp" alt="" width="34" height="34" loading="lazy"><div><b>Meadow House</b><span>Spring meadow cut</span></div></div></td><td><span class="badge">Scheduled</span></td><td class="num">Fri</td></tr>
+                    <tr><td><div class="cell-main"><img src="assets/img/garden-greenhouse.webp" alt="" width="34" height="34" loading="lazy"><div><b>Glasshouse Garden</b><span>Irrigation check</span></div></div></td><td><span class="badge badge--copper">Awaiting part</span></td><td class="num">Fri</td></tr>
+                    <tr><td><div class="cell-main"><img src="assets/img/flower-garden.webp" alt="" width="34" height="34" loading="lazy"><div><b>The Long Border</b><span>Stake &amp; tie perennials</span></div></div></td><td><span class="badge badge--muted">Done</span></td><td class="num">Wed</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="panel" aria-labelledby="activity-title">
+              <div class="panel-head">
+                <div><h3 id="activity-title">Studio activity</h3><p>Latest notes from the garden team</p></div>
+              </div>
+              <div class="activity">
+                <div class="activity-item"><i><svg class="icon" aria-hidden="true"><use href="#i-checkCircle"></use></svg></i><div class="activity-copy"><b>Amelia marked the Hidcote survey complete</b><span>24 minutes ago · Design</span></div></div>
+                <div class="activity-item"><i><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg></i><div class="activity-copy"><b>James added 6 photos to Meadow House</b><span>1 hour ago · Garden care</span></div></div>
+                <div class="activity-item"><i><svg class="icon" aria-hidden="true"><use href="#i-truck"></use></svg></i><div class="activity-copy"><b>Plant delivery confirmed for Willow House</b><span>2 hours ago · Procurement</span></div></div>
+                <div class="activity-item"><i><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg></i><div class="activity-copy"><b>Two new enquiries from Surrey and Kent</b><span>This morning · Studio</span></div></div>
+                <div class="activity-item"><i><svg class="icon" aria-hidden="true"><use href="#i-wallet"></use></svg></i><div class="activity-copy"><b>Invoice #4821 paid by the Sloane garden</b><span>Yesterday · Accounts</span></div></div>
+              </div>
+            </section>
+          </div>
+
+          <div class="dash-note" style="margin-top:1rem">
+            <svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg>
+            <span>This is a demonstration workspace. All gardens, clients and figures are fictional, and no data leaves your browser.</span>
+          </div>
+        </section>
+
+        <!-- ================= JOBS ================= -->
+        <section class="dash-section" id="sec-jobs" aria-labelledby="jobs-title">
+          <div class="dash-page-head">
+            <div>
+              <span class="eyebrow">Garden operations</span>
+              <h1 id="jobs-title">Jobs &amp; <em>tasks.</em></h1>
+              <p>Every visit, build task and follow-up in one list. Filter by status or search for a garden, client or job type.</p>
+            </div>
+            <div class="dash-head-actions">
+              <button class="button button--dark" type="button" data-dash-404>Add a job <svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg></button>
+              <button class="button button--outline" type="button" data-dash-404>Print run sheet</button>
+            </div>
+          </div>
+
+          <div class="dash-toolbar">
+            <div class="dash-search">
+              <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>
+              <input class="input" type="search" placeholder="Search jobs, gardens or gardeners" aria-label="Search jobs" data-dash-search="sec-jobs">
+            </div>
+            <div class="dash-toolbar-chips" data-dash-filter-group>
+              <button class="dash-filter is-active" type="button" data-dash-filter="all" data-dash-filter-target="sec-jobs">All</button>
+              <button class="dash-filter" type="button" data-dash-filter="scheduled" data-dash-filter-target="sec-jobs">Scheduled</button>
+              <button class="dash-filter" type="button" data-dash-filter="progress" data-dash-filter-target="sec-jobs">In progress</button>
+              <button class="dash-filter" type="button" data-dash-filter="done" data-dash-filter-target="sec-jobs">Completed</button>
+            </div>
+          </div>
+
+          <section class="panel" aria-labelledby="jobs-table-title">
+            <div class="panel-head">
+              <div><h3 id="jobs-table-title">All open work</h3><p>12 jobs across 7 gardens</p></div>
+              <span class="badge badge--gold">Spring week</span>
+            </div>
+            <div class="table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr><th scope="col">Garden / job</th><th scope="col">Lead</th><th scope="col">Status</th><th scope="col">Due</th><th scope="col"><span class="sr-only">Actions</span></th></tr>
+                </thead>
+                <tbody>
+                  <tr data-search-item data-status="progress">
+                    <td><div class="cell-main"><img src="assets/img/garden-estate.webp" alt="" width="34" height="34" loading="lazy"><div><b>Willow House · planting review</b><span>Estate · Gloucestershire</span></div></div></td>
+                    <td>EH</td><td><span class="badge badge--gold">In progress</span></td><td class="num">Today</td>
+                    <td class="actions"><button class="dash-icon-btn" type="button" data-dash-action="Planting review" aria-label="Mark planting review complete"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></button><button class="dash-icon-btn" type="button" data-dash-404 aria-label="Edit planting review"><svg class="icon" aria-hidden="true"><use href="#i-pen"></use></svg></button></td>
+                  </tr>
+                  <tr data-search-item data-status="scheduled">
+                    <td><div class="cell-main"><img src="assets/img/garden-hidcote.webp" alt="" width="34" height="34" loading="lazy"><div><b>Hidcote Courtyard · border edit</b><span>Courtyard · Gloucestershire</span></div></div></td>
+                    <td>RS</td><td><span class="badge">Scheduled</span></td><td class="num">Today</td>
+                    <td class="actions"><button class="dash-icon-btn" type="button" data-dash-action="Border edit" aria-label="Mark border edit complete"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></button><button class="dash-icon-btn" type="button" data-dash-404 aria-label="Edit border task"><svg class="icon" aria-hidden="true"><use href="#i-pen"></use></svg></button></td>
+                  </tr>
+                  <tr data-search-item data-status="scheduled">
+                    <td><div class="cell-main"><img src="assets/img/garden-meadow.webp" alt="" width="34" height="34" loading="lazy"><div><b>Meadow House · spring cut</b><span>Meadow · Kent</span></div></div></td>
+                    <td>JW</td><td><span class="badge">Scheduled</span></td><td class="num">Friday</td>
+                    <td class="actions"><button class="dash-icon-btn" type="button" data-dash-action="Meadow cut" aria-label="Mark meadow cut complete"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></button><button class="dash-icon-btn" type="button" data-dash-404 aria-label="Edit meadow task"><svg class="icon" aria-hidden="true"><use href="#i-pen"></use></svg></button></td>
+                  </tr>
+                  <tr data-search-item data-status="progress">
+                    <td><div class="cell-main"><img src="assets/img/garden-greenhouse.webp" alt="" width="34" height="34" loading="lazy"><div><b>Glasshouse Garden · irrigation check</b><span>Productive · Surrey</span></div></div></td>
+                    <td>JW</td><td><span class="badge badge--copper">Awaiting part</span></td><td class="num">Friday</td>
+                    <td class="actions"><button class="dash-icon-btn" type="button" data-dash-action="Irrigation check" aria-label="Mark irrigation check complete"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></button><button class="dash-icon-btn" type="button" data-dash-404 aria-label="Edit irrigation task"><svg class="icon" aria-hidden="true"><use href="#i-pen"></use></svg></button></td>
+                  </tr>
+                  <tr data-search-item data-status="done">
+                    <td><div class="cell-main"><img src="assets/img/flower-garden.webp" alt="" width="34" height="34" loading="lazy"><div><b>The Long Border · stake &amp; tie</b><span>Planting · Sussex</span></div></div></td>
+                    <td>AM</td><td><span class="badge badge--muted">Completed</span></td><td class="num">Wednesday</td>
+                    <td class="actions"><button class="dash-icon-btn" type="button" data-dash-action="Border staking" aria-label="Mark border staking complete"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></button><button class="dash-icon-btn" type="button" data-dash-404 aria-label="Edit staking task"><svg class="icon" aria-hidden="true"><use href="#i-pen"></use></svg></button></td>
+                  </tr>
+                  <tr data-search-item data-status="scheduled">
+                    <td><div class="cell-main"><img src="assets/img/garden-pergola.webp" alt="" width="34" height="34" loading="lazy"><div><b>Oak Pergola · climber training</b><span>Terrace · Oxfordshire</span></div></div></td>
+                    <td>RS</td><td><span class="badge">Scheduled</span></td><td class="num">Mon 16</td>
+                    <td class="actions"><button class="dash-icon-btn" type="button" data-dash-action="Climber training" aria-label="Mark climber training complete"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></button><button class="dash-icon-btn" type="button" data-dash-404 aria-label="Edit climber task"><svg class="icon" aria-hidden="true"><use href="#i-pen"></use></svg></button></td>
+                  </tr>
+                  <tr data-search-item data-status="done">
+                    <td><div class="cell-main"><img src="assets/img/garden-lawn.webp" alt="" width="34" height="34" loading="lazy"><div><b>Lawn restoration · first cut</b><span>Family garden · Surrey</span></div></div></td>
+                    <td>JW</td><td><span class="badge badge--muted">Completed</span></td><td class="num">Tuesday</td>
+                    <td class="actions"><button class="dash-icon-btn" type="button" data-dash-action="Lawn cut" aria-label="Mark lawn cut complete"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></button><button class="dash-icon-btn" type="button" data-dash-404 aria-label="Edit lawn task"><svg class="icon" aria-hidden="true"><use href="#i-pen"></use></svg></button></td>
+                  </tr>
+                  <tr data-search-item data-status="scheduled">
+                    <td><div class="cell-main"><img src="assets/img/garden-water.webp" alt="" width="34" height="34" loading="lazy"><div><b>Water bowl · spring clean</b><span>Courtyard · Chelsea</span></div></div></td>
+                    <td>EH</td><td><span class="badge">Scheduled</span></td><td class="num">Mon 16</td>
+                    <td class="actions"><button class="dash-icon-btn" type="button" data-dash-action="Water bowl clean" aria-label="Mark water bowl clean complete"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></button><button class="dash-icon-btn" type="button" data-dash-404 aria-label="Edit water bowl task"><svg class="icon" aria-hidden="true"><use href="#i-pen"></use></svg></button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="dash-empty" data-search-empty hidden>
+              <i><svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg></i>
+              <b>No jobs match that search</b>
+              <p>Try a garden name, a client or a shorter phrase.</p>
+            </div>
+          </section>
+        </section>
+
+        <!-- ================= PROJECTS ================= -->
+        <section class="dash-section" id="sec-projects" aria-labelledby="projects-title">
+          <div class="dash-page-head">
+            <div>
+              <span class="eyebrow">Design studio</span>
+              <h1 id="projects-title">Projects &amp; <em>milestones.</em></h1>
+              <p>Seven live projects from first survey to final planting. Keep an eye on the gardens approaching their build window.</p>
+            </div>
+            <div class="dash-head-actions">
+              <button class="button button--dark" type="button" data-dash-404>New project <svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg></button>
+            </div>
+          </div>
+
+          <div class="dash-grid dash-grid--sidebar">
+            <section class="panel" aria-labelledby="project-table-title">
+              <div class="panel-head">
+                <div><h3 id="project-table-title">Live projects</h3><p>Sorted by next milestone</p></div>
+                <span class="badge badge--gold">7 live</span>
+              </div>
+              <div class="table-wrap">
+                <table class="dash-table">
+                  <thead><tr><th scope="col">Project</th><th scope="col">Stage</th><th scope="col">Value</th><th scope="col">Next</th></tr></thead>
+                  <tbody>
+                    <tr><td><div class="cell-main"><img src="assets/img/garden-estate.webp" alt="" width="34" height="34" loading="lazy"><div><b>The Willow House</b><span>Cotswolds · estate</span></div></div></td><td><span class="badge badge--gold">Planting</span></td><td class="num">£84k</td><td>12 Apr</td></tr>
+                    <tr><td><div class="cell-main"><img src="assets/img/garden-hidcote.webp" alt="" width="34" height="34" loading="lazy"><div><b>Hidcote Courtyard</b><span>Gloucestershire · courtyard</span></div></div></td><td><span class="badge">Concept</span></td><td class="num">£22k</td><td>18 Apr</td></tr>
+                    <tr><td><div class="cell-main"><img src="assets/img/garden-greenhouse.webp" alt="" width="34" height="34" loading="lazy"><div><b>The Glasshouse Garden</b><span>Surrey · productive</span></div></div></td><td><span class="badge badge--copper">Build</span></td><td class="num">£61k</td><td>2 May</td></tr>
+                    <tr><td><div class="cell-main"><img src="assets/img/garden-modern.webp" alt="" width="34" height="34" loading="lazy"><div><b>Courtyard House</b><span>London · modern</span></div></div></td><td><span class="badge">Survey</span></td><td class="num">£38k</td><td>9 May</td></tr>
+                    <tr><td><div class="cell-main"><img src="assets/img/garden-meadow.webp" alt="" width="34" height="34" loading="lazy"><div><b>Meadow House</b><span>Kent · meadow</span></div></div></td><td><span class="badge badge--muted">Aftercare</span></td><td class="num">£47k</td><td>Ongoing</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="panel" aria-labelledby="milestones-title">
+              <div class="panel-head">
+                <div><h3 id="milestones-title">Build readiness</h3><p>Design to ground, by garden</p></div>
+              </div>
+              <div class="progress-list">
+                <div class="progress-item">
+                  <div class="meter"><div class="meter-head"><span>The Willow House</span><b>92%</b></div><div class="meter-track"><span class="meter-fill" data-meter="92"></span></div></div>
+                </div>
+                <div class="progress-item">
+                  <div class="meter"><div class="meter-head"><span>Glasshouse Garden</span><b>74%</b></div><div class="meter-track"><span class="meter-fill" data-meter="74"></span></div></div>
+                </div>
+                <div class="progress-item">
+                  <div class="meter"><div class="meter-head"><span>Hidcote Courtyard</span><b>46%</b></div><div class="meter-track"><span class="meter-fill" data-meter="46"></span></div></div>
+                </div>
+                <div class="progress-item">
+                  <div class="meter"><div class="meter-head"><span>Courtyard House</span><b>28%</b></div><div class="meter-track"><span class="meter-fill" data-meter="28"></span></div></div>
+                </div>
+              </div>
+              <div class="mini-stats" style="margin-top:1rem">
+                <div class="mini-stat"><b>£252k</b><span>Pipeline value</span></div>
+                <div class="mini-stat"><b>3</b><span>Builds this quarter</span></div>
+              </div>
+              <button class="button button--outline button--block" type="button" data-dash-404 style="margin-top:.9rem">Add a milestone</button>
+            </section>
+          </div>
+
+          <div class="dash-grid dash-grid--3">
+            <section class="panel">
+              <div class="panel-head"><div><h3>Concept</h3><p>Drawings with the studio</p></div><span class="badge">3</span></div>
+              <div class="ring-row">
+                <div class="ring" data-value="46"><b>46%<small>Complete</small></b></div>
+                <div class="ring-copy"><h4>Hidcote Courtyard</h4><p>Planting palette in review. Stone samples with the client this week.</p></div>
+              </div>
+            </section>
+            <section class="panel">
+              <div class="panel-head"><div><h3>Build</h3><p>On site now</p></div><span class="badge badge--copper">1</span></div>
+              <div class="ring-row">
+                <div class="ring ring--copper" data-value="74"><b>74%<small>Complete</small></b></div>
+                <div class="ring-copy"><h4>Glasshouse Garden</h4><p>Glasshouse restored, standing beds set. Irrigation commissioning next.</p></div>
+              </div>
+            </section>
+            <section class="panel">
+              <div class="panel-head"><div><h3>Planting</h3><p>Ready or in ground</p></div><span class="badge badge--gold">2</span></div>
+              <div class="ring-row">
+                <div class="ring ring--sage" data-value="92"><b>92%<small>Complete</small></b></div>
+                <div class="ring-copy"><h4>The Willow House</h4><p>Final trees delivered. Herbaceous layer begins Monday.</p></div>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <!-- ================= SCHEDULE ================= -->
+        <section class="dash-section" id="sec-schedule" aria-labelledby="schedule-title">
+          <div class="dash-page-head">
+            <div>
+              <span class="eyebrow">The working week</span>
+              <h1 id="schedule-title">Schedule &amp; <em>visits.</em></h1>
+              <p>Six gardeners are out this week. Drag-free, print-friendly and built around the plant supply calendar.</p>
+            </div>
+            <div class="dash-head-actions">
+              <button class="button button--dark" type="button" data-dash-404>Book a visit <svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg></button>
+              <button class="button button--outline" type="button" data-dash-404>Sync calendar</button>
+            </div>
+          </div>
+
+          <section class="panel" aria-labelledby="week-title">
+            <div class="panel-head">
+              <div><h3 id="week-title">Week of 9 March</h3><p>Spring planting week · all teams</p></div>
+              <span class="badge badge--gold">24 visits</span>
+            </div>
+            <div class="sched-days">
+              <div class="sched-day"><span>Mon</span><b>09</b><em>4 jobs</em></div>
+              <div class="sched-day"><span>Tue</span><b>10</b><em>3 jobs</em></div>
+              <div class="sched-day"><span>Wed</span><b>11</b><em>5 jobs</em></div>
+              <div class="sched-day is-today has-job"><span>Thu</span><b>12</b><em>Today · 4</em></div>
+              <div class="sched-day has-job"><span>Fri</span><b>13</b><em>5 jobs</em></div>
+              <div class="sched-day"><span>Sat</span><b>14</b><em>3 jobs</em></div>
+              <div class="sched-day"><span>Sun</span><b>15</b><em>Rest</em></div>
+            </div>
+            <div class="appt-list" style="margin-top:1rem">
+              <div class="appt"><div class="appt-date"><b>08</b><span>30 am</span></div><div class="appt-copy"><b>The Willow House · planting review</b><span><svg class="icon" aria-hidden="true"><use href="#i-mapPin"></use></svg> Cotswolds · Eleanor &amp; James</span></div><span class="badge badge--gold">Now</span></div>
+              <div class="appt"><div class="appt-date"><b>11</b><span>00 am</span></div><div class="appt-copy"><b>Hidcote Courtyard · border edit</b><span><svg class="icon" aria-hidden="true"><use href="#i-mapPin"></use></svg> Gloucestershire · Richard</span></div><span class="badge">En route</span></div>
+              <div class="appt"><div class="appt-date"><b>14</b><span>00 pm</span></div><div class="appt-copy"><b>Meadow House · spring meadow cut</b><span><svg class="icon" aria-hidden="true"><use href="#i-mapPin"></use></svg> Kent · James &amp; team</span></div><span class="badge badge--muted">Confirmed</span></div>
+              <div class="appt"><div class="appt-date"><b>16</b><span>30 pm</span></div><div class="appt-copy"><b>New enquiry · first garden walk</b><span><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg> Surrey · Eleanor</span></div><span class="badge badge--info">Call</span></div>
+            </div>
+          </section>
+
+          <div class="dash-grid dash-grid--2">
+            <section class="panel">
+              <div class="panel-head"><div><h3>Team availability</h3><p>Thursday · 12 March</p></div></div>
+              <div class="table-wrap">
+                <table class="dash-table dash-table--compact">
+                  <thead><tr><th scope="col">Garden team</th><th scope="col">First visit</th><th scope="col">Status</th></tr></thead>
+                  <tbody>
+                    <tr><td><div class="cell-main"><span class="avatar">EH</span><div><b>Eleanor Hart</b><span>Design &amp; client care</span></div></div></td><td>08:30</td><td><span class="badge badge--gold">On site</span></td></tr>
+                    <tr><td><div class="cell-main"><span class="avatar">JW</span><div><b>James Whitfield</b><span>Horticulture</span></div></div></td><td>08:30</td><td><span class="badge badge--gold">On site</span></td></tr>
+                    <tr><td><div class="cell-main"><span class="avatar">RS</span><div><b>Richard Sloane</b><span>Garden care</span></div></div></td><td>11:00</td><td><span class="badge">En route</span></td></tr>
+                    <tr><td><div class="cell-main"><span class="avatar">AM</span><div><b>Amelia Moore</b><span>Landscape architecture</span></div></div></td><td>09:30</td><td><span class="badge badge--info">Studio</span></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+            <section class="panel">
+              <div class="panel-head"><div><h3>This week's checks</h3><p>Before the teams leave the yard</p></div></div>
+              <div class="tip-list">
+                <div class="tip tip--gold"><i><svg class="icon" aria-hidden="true"><use href="#i-truck"></use></svg></i><div><b>Plant delivery · 07:00</b><p>Willow House trees and 240 perennials. Check root balls on arrival.</p></div></div>
+                <div class="tip"><i><svg class="icon" aria-hidden="true"><use href="#i-droplet"></use></svg></i><div><b>Irrigation commissioning</b><p>Glasshouse Garden · pressure test before Friday planting.</p></div></div>
+                <div class="tip"><i><svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg></i><div><b>Tool audit</b><p>Sharpen, clean and log every blade before the weekend.</p></div></div>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <!-- ================= CLIENTS ================= -->
+        <section class="dash-section" id="sec-clients" aria-labelledby="clients-title">
+          <div class="dash-page-head">
+            <div>
+              <span class="eyebrow">Relationships</span>
+              <h1 id="clients-title">Clients &amp; <em>gardens.</em></h1>
+              <p>Every garden has a keeper. These are the people we design for, plant with and visit through the seasons.</p>
+            </div>
+            <div class="dash-head-actions">
+              <button class="button button--dark" type="button" data-dash-404>Add a client <svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg></button>
+            </div>
+          </div>
+
+          <div class="dash-toolbar">
+            <div class="dash-search">
+              <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>
+              <input class="input" type="search" placeholder="Search clients or gardens" aria-label="Search clients" data-dash-search="sec-clients">
+            </div>
+            <div class="dash-toolbar-chips" data-dash-filter-group>
+              <button class="dash-filter is-active" type="button" data-dash-filter="all" data-dash-filter-target="sec-clients">All</button>
+              <button class="dash-filter" type="button" data-dash-filter="care" data-dash-filter-target="sec-clients">Care plan</button>
+              <button class="dash-filter" type="button" data-dash-filter="project" data-dash-filter-target="sec-clients">Project</button>
+              <button class="dash-filter" type="button" data-dash-filter="lead" data-dash-filter-target="sec-clients">Enquiry</button>
+            </div>
+          </div>
+
+          <div class="client-grid">
+            <article class="client-card" data-search-item data-status="care">
+              <span class="avatar">EH</span>
+              <div style="min-width:0"><b>The Willow House</b><span>Eleanor &amp; Hugo · Cotswolds</span></div>
+              <span class="badge badge--gold">Care</span>
+            </article>
+            <article class="client-card" data-search-item data-status="project">
+              <span class="avatar">JW</span>
+              <div style="min-width:0"><b>Hidcote Courtyard</b><span>James Whitfield · Gloucestershire</span></div>
+              <span class="badge badge--info">Project</span>
+            </article>
+            <article class="client-card" data-search-item data-status="care">
+              <span class="avatar">AM</span>
+              <div style="min-width:0"><b>Meadow House</b><span>Amelia Moore · Kent</span></div>
+              <span class="badge badge--gold">Care</span>
+            </article>
+            <article class="client-card" data-search-item data-status="project">
+              <span class="avatar">RS</span>
+              <div style="min-width:0"><b>The Glasshouse Garden</b><span>Richard Sloane · Surrey</span></div>
+              <span class="badge badge--info">Project</span>
+            </article>
+            <article class="client-card" data-search-item data-status="lead">
+              <span class="avatar">MC</span>
+              <div style="min-width:0"><b>Courtyard House</b><span>Mara Chen · London</span></div>
+              <span class="badge badge--copper">Enquiry</span>
+            </article>
+            <article class="client-card" data-search-item data-status="lead">
+              <span class="avatar">TB</span>
+              <div style="min-width:0"><b>Downsview Garden</b><span>Tom &amp; Bea Ellis · Sussex</span></div>
+              <span class="badge badge--copper">Enquiry</span>
+            </article>
+          </div>
+
+          <section class="panel" style="margin-top:1rem" aria-labelledby="enquiries-title">
+            <div class="panel-head">
+              <div><h3 id="enquiries-title">Recent enquiries</h3><p>First conversations this month</p></div>
+              <span class="badge">4 new</span>
+            </div>
+            <div class="table-wrap">
+              <table class="dash-table">
+                <thead><tr><th scope="col">Prospect</th><th scope="col">Garden</th><th scope="col">Budget</th><th scope="col">Received</th><th scope="col"><span class="sr-only">Actions</span></th></tr></thead>
+                <tbody>
+                  <tr data-search-item><td><div class="cell-main"><span class="avatar">MC</span><div><b>Mara Chen</b><span>mara.chen@example.com</span></div></div></td><td>London courtyard</td><td class="num">£15–40k</td><td>Today</td><td class="actions"><button class="dash-icon-btn" type="button" data-dash-404 aria-label="Open Mara Chen enquiry"><svg class="icon" aria-hidden="true"><use href="#i-arrowUpRight"></use></svg></button></td></tr>
+                  <tr data-search-item><td><div class="cell-main"><span class="avatar">TB</span><div><b>Tom &amp; Bea Ellis</b><span>t.bea@example.com</span></div></div></td><td>Sussex lawn &amp; meadow</td><td class="num">£5–15k</td><td>Yesterday</td><td class="actions"><button class="dash-icon-btn" type="button" data-dash-404 aria-label="Open Ellis enquiry"><svg class="icon" aria-hidden="true"><use href="#i-arrowUpRight"></use></svg></button></td></tr>
+                  <tr data-search-item><td><div class="cell-main"><span class="avatar">PN</span><div><b>Priya Nair</b><span>priya.nair@example.com</span></div></div></td><td>Oxfordshire terrace</td><td class="num">£40–100k</td><td>2 days ago</td><td class="actions"><button class="dash-icon-btn" type="button" data-dash-404 aria-label="Open Priya Nair enquiry"><svg class="icon" aria-hidden="true"><use href="#i-arrowUpRight"></use></svg></button></td></tr>
+                  <tr data-search-item><td><div class="cell-main"><span class="avatar">LF</span><div><b>Luca Ferraro</b><span>luca.f@example.com</span></div></div></td><td>Chelsea roof garden</td><td class="num">£15–40k</td><td>3 days ago</td><td class="actions"><button class="dash-icon-btn" type="button" data-dash-404 aria-label="Open Luca Ferraro enquiry"><svg class="icon" aria-hidden="true"><use href="#i-arrowUpRight"></use></svg></button></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="dash-empty" data-search-empty hidden>
+              <i><svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg></i>
+              <b>No clients match that search</b>
+              <p>Try a surname, garden name or town.</p>
+            </div>
+          </section>
+        </section>
+
+        <!-- ================= SERVICES ================= -->
+        <section class="dash-section" id="sec-services" aria-labelledby="services-title">
+          <div class="dash-page-head">
+            <div>
+              <span class="eyebrow">Studio offer</span>
+              <h1 id="services-title">Services &amp; <em>stock.</em></h1>
+              <p>The disciplines we sell, the plants we hold and the materials we keep in the yard. Everything priced for the demonstration.</p>
+            </div>
+            <div class="dash-head-actions">
+              <button class="button button--dark" type="button" data-dash-404>Add a service <svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg></button>
+            </div>
+          </div>
+
+          <div class="dash-grid dash-grid--sidebar">
+            <section class="panel" aria-labelledby="service-list-title">
+              <div class="panel-head"><div><h3 id="service-list-title">Core services</h3><p>Design, build and care</p></div><span class="badge">6</span></div>
+              <div class="service-rows">
+                <div class="service-row"><img src="assets/img/garden-design.webp" alt="" width="42" height="42" loading="lazy"><div><b>Landscape design</b><span>Survey, masterplan, planting plan</span></div><span class="price">from £2,400</span></div>
+                <div class="service-row"><img src="assets/img/flower-garden.webp" alt="" width="42" height="42" loading="lazy"><div><b>Planting &amp; borders</b><span>Perennials, shrubs, bulbs</span></div><span class="price">from £3,800</span></div>
+                <div class="service-row"><img src="assets/img/lawn-mow.webp" alt="" width="42" height="42" loading="lazy"><div><b>Lawn &amp; meadow</b><span>Renovation and meadow conversion</span></div><span class="price">from £1,600</span></div>
+                <div class="service-row"><img src="assets/img/garden-water.webp" alt="" width="42" height="42" loading="lazy"><div><b>Irrigation &amp; water</b><span>Drip lines, ponds, water bowls</span></div><span class="price">from £2,200</span></div>
+                <div class="service-row"><img src="assets/img/garden-care.webp" alt="" width="42" height="42" loading="lazy"><div><b>Seasonal care</b><span>Pruning, feeding, aftercare</span></div><span class="price">from £180/mo</span></div>
+                <div class="service-row"><img src="assets/img/garden-pergola.webp" alt="" width="42" height="42" loading="lazy"><div><b>Hard landscaping</b><span>Stone, oak, paths and steps</span></div><span class="price">from £18,000</span></div>
+              </div>
+            </section>
+
+            <section class="panel" aria-labelledby="stock-title">
+              <div class="panel-head"><div><h3 id="stock-title">Plant stock</h3><p>Held at the glasshouse yard</p></div></div>
+              <div class="progress-list">
+                <div class="progress-item"><div class="meter"><div class="meter-head"><span>Perennials</span><b>82%</b></div><div class="meter-track"><span class="meter-fill" data-meter="82"></span></div></div></div>
+                <div class="progress-item"><div class="meter"><div class="meter-head"><span>Shrubs &amp; trees</span><b>64%</b></div><div class="meter-track"><span class="meter-fill" data-meter="64"></span></div></div></div>
+                <div class="progress-item"><div class="meter"><div class="meter-head"><span>Bulbs &amp; corms</span><b>38%</b></div><div class="meter-track"><span class="meter-fill" data-meter="38"></span></div></div></div>
+                <div class="progress-item"><div class="meter"><div class="meter-head"><span>Compost &amp; mulch</span><b>91%</b></div><div class="meter-track"><span class="meter-fill" data-meter="91"></span></div></div></div>
+              </div>
+              <div class="mini-stats" style="margin-top:1rem">
+                <div class="mini-stat"><b>4,280</b><span>Plants in stock</span></div>
+                <div class="mini-stat"><b>3</b><span>Deliveries due</span></div>
+              </div>
+              <button class="button button--outline button--block" type="button" data-dash-404 style="margin-top:.9rem">Order stock</button>
+            </section>
+          </div>
+
+          <section class="panel" style="margin-top:1rem" aria-labelledby="inventory-title">
+            <div class="panel-head"><div><h3 id="inventory-title">Material inventory</h3><p>Yard count, updated this morning</p></div><span class="badge badge--muted">Demo data</span></div>
+            <div class="table-wrap">
+              <table class="dash-table">
+                <thead><tr><th scope="col">Material</th><th scope="col">Supplier</th><th scope="col">In stock</th><th scope="col">Status</th><th scope="col">Next delivery</th></tr></thead>
+                <tbody>
+                  <tr><td>Horticultural grit <span class="num">· 4mm</span></td><td>Bath Stone Co.</td><td class="num">2.4 t</td><td><span class="badge">Healthy</span></td><td>18 Apr</td></tr>
+                  <tr><td>Peat-free mulch <span class="num">· bark</span></td><td>Melcourt</td><td class="num">1.1 t</td><td><span class="badge badge--gold">Low</span></td><td>14 Apr</td></tr>
+                  <tr><td>Yorkshire stone setts</td><td>Stonepave</td><td class="num">86</td><td><span class="badge">Healthy</span></td><td>—</td></tr>
+                  <tr><td>Oak sleepers <span class="num">· 2.4m</span></td><td>English Woodlands</td><td class="num">24</td><td><span class="badge badge--copper">Reorder</span></td><td>22 Apr</td></tr>
+                  <tr><td>Drip line <span class="num">· 16mm</span></td><td>Netafim</td><td class="num">280 m</td><td><span class="badge">Healthy</span></td><td>—</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+
+        <!-- ================= REPORTS ================= -->
+        <section class="dash-section" id="sec-reports" aria-labelledby="reports-title">
+          <div class="dash-page-head">
+            <div>
+              <span class="eyebrow">The numbers</span>
+              <h1 id="reports-title">Reports &amp; <em>insight.</em></h1>
+              <p>Hours, revenue and garden health at a glance. Figures are illustrative and belong to the demonstration studio.</p>
+            </div>
+            <div class="dash-head-actions">
+              <button class="button button--dark" type="button" data-dash-404>Export report <svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg></button>
+              <button class="button button--outline" type="button" data-dash-404>Choose period</button>
+            </div>
+          </div>
+
+          <div class="kpi-grid">
+            <article class="kpi"><div class="kpi-top"><span class="kpi-ico kpi-ico--gold"><svg class="icon" aria-hidden="true"><use href="#i-trendingUp"></use></svg></span><span class="kpi-trend"><svg class="icon" aria-hidden="true"><use href="#i-trendingUp"></use></svg> 8.4%</span></div><strong>£<span data-count="148">0</span>k</strong><span>Revenue this quarter</span><div class="kpi-foot">vs £136k last quarter</div></article>
+            <article class="kpi"><div class="kpi-top"><span class="kpi-ico kpi-ico--info"><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg></span><span class="kpi-trend"><svg class="icon" aria-hidden="true"><use href="#i-trendingUp"></use></svg> 94%</span></div><strong><span data-count="94">0</span>%</strong><span>Garden hours utilised</span><div class="kpi-foot">1,240 billable hours</div></article>
+            <article class="kpi"><div class="kpi-top"><span class="kpi-ico"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></span><span class="kpi-trend"><svg class="icon" aria-hidden="true"><use href="#i-trendingUp"></use></svg> 12</span></div><strong><span data-count="96">0</span>%</strong><span>Client retention</span><div class="kpi-foot">Beyond year three</div></article>
+            <article class="kpi"><div class="kpi-top"><span class="kpi-ico kpi-ico--copper"><svg class="icon" aria-hidden="true"><use href="#i-wallet"></use></svg></span><span class="kpi-trend is-down"><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg> 2</span></div><strong>£<span data-count="12">0</span>.4k</strong><span>Awaiting payment</span><div class="kpi-foot">Two invoices overdue</div></article>
+          </div>
+
+          <div class="dash-grid dash-grid--2">
+            <section class="panel" aria-labelledby="revenue-chart-title">
+              <div class="panel-head"><div><h3 id="revenue-chart-title">Revenue by month</h3><p>Design, build and care income · 2026</p></div><span class="badge badge--gold">Year to date</span></div>
+              <div class="chart" role="img" aria-label="Revenue by month, rising through the spring">
+                <div class="chart-col"><span class="chart-bar" data-value="38"></span><span class="chart-label">Jan</span></div>
+                <div class="chart-col"><span class="chart-bar" data-value="46"></span><span class="chart-label">Feb</span></div>
+                <div class="chart-col"><span class="chart-bar" data-value="72"></span><span class="chart-label">Mar</span></div>
+                <div class="chart-col"><span class="chart-bar" data-value="64"></span><span class="chart-label">Apr</span></div>
+                <div class="chart-col"><span class="chart-bar" data-value="88"></span><span class="chart-label">May</span></div>
+                <div class="chart-col"><span class="chart-bar" data-value="76"></span><span class="chart-label">Jun</span></div>
+                <div class="chart-col"><span class="chart-bar" data-value="58"></span><span class="chart-label">Jul</span></div>
+                <div class="chart-col"><span class="chart-bar" data-value="42"></span><span class="chart-label">Aug</span></div>
+              </div>
+              <div class="chart-legend"><span><i></i> Design &amp; build</span><span><i class="is-sage"></i> Care plans</span></div>
+            </section>
+
+            <section class="panel" aria-labelledby="health-title">
+              <div class="panel-head"><div><h3 id="health-title">Garden health index</h3><p>Studio-wide care quality</p></div></div>
+              <div class="ring-row">
+                <div class="ring" data-value="92"><b>92%<small>Overall</small></b></div>
+                <div class="ring ring--sage" data-value="86"><b>86%<small>Seasonal</small></b></div>
+                <div class="ring ring--copper" data-value="78"><b>78%<small>Build</small></b></div>
+              </div>
+              <div class="mini-stats" style="margin-top:1rem">
+                <div class="mini-stat"><b>128</b><span>Client reviews</span></div>
+                <div class="mini-stat"><b>4.9</b><span>Average rating</span></div>
+                <div class="mini-stat"><b>18</b><span>Care plans</span></div>
+              </div>
+              <p class="field-hint" style="margin-top:.7rem">Health is scored from visit notes, plant establishment and client feedback.</p>
+            </section>
+          </div>
+
+          <div class="dash-grid dash-grid--2">
+            <section class="panel" aria-labelledby="top-gardens-title">
+              <div class="panel-head"><div><h3 id="top-gardens-title">Top gardens by hours</h3><p>Last 30 days</p></div></div>
+              <div class="table-wrap">
+                <table class="dash-table dash-table--compact">
+                  <thead><tr><th scope="col">Garden</th><th scope="col">Hours</th><th scope="col">Care plan</th></tr></thead>
+                  <tbody>
+                    <tr><td>The Willow House</td><td class="num">86</td><td><span class="badge badge--gold">Estate</span></td></tr>
+                    <tr><td>Meadow House</td><td class="num">64</td><td><span class="badge">Signature</span></td></tr>
+                    <tr><td>Glasshouse Garden</td><td class="num">58</td><td><span class="badge">Signature</span></td></tr>
+                    <tr><td>Hidcote Courtyard</td><td class="num">32</td><td><span class="badge badge--muted">Essential</span></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+            <section class="panel" aria-labelledby="report-notes-title">
+              <div class="panel-head"><div><h3 id="report-notes-title">What the numbers say</h3><p>Notes from the studio review</p></div></div>
+              <div class="activity">
+                <div class="activity-item"><i><svg class="icon" aria-hidden="true"><use href="#i-trendingUp"></use></svg></i><div class="activity-copy"><b>Care plans now cover 42% of revenue</b><span>Up from 36% at the same point last year.</span></div></div>
+                <div class="activity-item"><i><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg></i><div class="activity-copy"><b>Average visit is 18 minutes longer</b><span>Largely spring planting and meadow work.</span></div></div>
+                <div class="activity-item"><i><svg class="icon" aria-hidden="true"><use href="#i-award"></use></svg></i><div class="activity-copy"><b>Three gardens reach year five in 2026</b><span>A good moment to offer a garden review.</span></div></div>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <!-- ================= SETTINGS ================= -->
+        <section class="dash-section" id="sec-settings" aria-labelledby="settings-title">
+          <div class="dash-page-head">
+            <div>
+              <span class="eyebrow">Your account</span>
+              <h1 id="settings-title">Settings &amp; <em>preferences.</em></h1>
+              <p>Update your studio profile and decide how the workspace should behave. Demo changes are held for this session only.</p>
+            </div>
+            <div class="dash-head-actions">
+              <button class="button button--outline" type="button" data-logout>Sign out <svg class="icon" aria-hidden="true"><use href="#i-logOut"></use></svg></button>
+            </div>
+          </div>
+
+          <div class="settings-grid">
+            <section class="settings-card" aria-labelledby="profile-title">
+              <h3 id="profile-title">Studio profile</h3>
+              <p>The name and contact details shown across the workspace.</p>
+              <form class="settings-form" data-dash-save-form>
+                <div class="field">
+                  <label class="form-label" for="admin-name">Full name</label>
+                  <input class="input" id="admin-name" name="name" type="text" value="Eleanor Hart" autocomplete="name">
+                </div>
+                <div class="field">
+                  <label class="form-label" for="admin-email">Email address</label>
+                  <input class="input" id="admin-email" name="email" type="email" value="admin@stackly.demo" autocomplete="email">
+                </div>
+                <div class="field">
+                  <label class="form-label" for="admin-phone">Phone</label>
+                  <input class="input" id="admin-phone" name="phone" type="tel" value="555 014 2208" autocomplete="tel">
+                </div>
+                <button class="button button--dark" type="submit">Save profile</button>
+              </form>
+            </section>
+
+            <section class="settings-card" aria-labelledby="studio-prefs-title">
+              <h3 id="studio-prefs-title">Studio preferences</h3>
+              <p>Regional and scheduling defaults for new jobs.</p>
+              <form class="settings-form" data-dash-save-form>
+                <div class="field">
+                  <label class="form-label" for="admin-region">Primary region</label>
+                  <select class="panel-select" id="admin-region" name="region" style="width:100%">
+                    <option>London &amp; Home Counties</option>
+                    <option>The Cotswolds</option>
+                    <option>Sussex &amp; Kent</option>
+                    <option>Oxfordshire</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label class="form-label" for="admin-week">Working week starts</label>
+                  <select class="panel-select" id="admin-week" name="week" style="width:100%">
+                    <option>Monday</option>
+                    <option>Tuesday</option>
+                    <option>Wednesday</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label class="form-label" for="admin-visit">Default visit length</label>
+                  <select class="panel-select" id="admin-visit" name="visit" style="width:100%">
+                    <option>2 hours</option>
+                    <option>3 hours</option>
+                    <option>Half day</option>
+                    <option>Full day</option>
+                  </select>
+                </div>
+                <button class="button button--dark" type="submit">Save preferences</button>
+              </form>
+            </section>
+
+            <section class="settings-card" aria-labelledby="notify-title">
+              <h3 id="notify-title">Notifications</h3>
+              <p>What reaches you, and when.</p>
+              <div class="toggle-row"><input type="checkbox" id="notify-visits" checked><div><label for="notify-visits"><b>Daily visit digest</b><span>A 7:00 am summary of every team on site.</span></label></div></div>
+              <div class="toggle-row"><input type="checkbox" id="notify-leads" checked><div><label for="notify-leads"><b>New enquiries</b><span>Email me as soon as a project note arrives.</span></label></div></div>
+              <div class="toggle-row"><input type="checkbox" id="notify-stock"><div><label for="notify-stock"><b>Low stock alerts</b><span>When plant or material stock falls below target.</span></label></div></div>
+              <div class="toggle-row"><input type="checkbox" id="notify-news" checked><div><label for="notify-news"><b>Studio newsletter</b><span>Occasional planting notes and RHS updates.</span></label></div></div>
+            </section>
+
+            <section class="settings-card" aria-labelledby="security-title">
+              <h3 id="security-title">Security</h3>
+              <p>Demo credentials and access.</p>
+              <form class="settings-form" data-dash-save-form>
+                <div class="field">
+                  <label class="form-label" for="admin-current">Current password</label>
+                  <input class="input" id="admin-current" name="current" type="password" placeholder="••••••••" autocomplete="current-password">
+                </div>
+                <div class="field">
+                  <label class="form-label" for="admin-new">New password</label>
+                  <input class="input" id="admin-new" name="new" type="password" placeholder="At least 8 characters" autocomplete="new-password">
+                </div>
+                <button class="button button--outline" type="submit">Update password</button>
+              </form>
+              <div class="dash-note" style="margin-top:.8rem">
+                <svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg>
+                <span>Demo accounts are stored locally. Do not use a real password anywhere on this site.</span>
+              </div>
+            </section>
+          </div>
+
+          <section class="panel" style="margin-top:1rem" aria-labelledby="danger-title">
+            <div class="panel-head"><div><h3 id="danger-title">Workspace data</h3><p>Reset this demonstration whenever you like.</p></div></div>
+            <div class="button-row">
+              <button class="button button--outline" type="button" data-dash-404>Export demo data</button>
+              <button class="button button--outline" type="button" data-dash-404>Reset demo workspace</button>
+            </div>
+          </section>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="assets/js/site.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,421 @@
+/* ==========================================================================
+   STACKLY — shared hover polish
+   A single, modern interaction layer for cards, buttons, links and list points.
+   Loaded after the page styles so every page gets the same feel.
+   ========================================================================== */
+
+:root {
+  --hover-ease: cubic-bezier(.22, 1, .36, 1);
+  --hover-lift: -8px;
+  --hover-ring: rgba(240, 214, 154, .42);
+  --hover-glow: 0 30px 60px -38px rgba(13, 31, 22, .58);
+}
+
+@media (hover: hover) and (pointer: fine) {
+
+  /* ------------------------------------------------------------------
+     Cards
+     ------------------------------------------------------------------ */
+  .card,
+  .service-card,
+  .project-card,
+  .journal-card,
+  .plan-card,
+  .testimonial-card,
+  .team-card,
+  .step-card,
+  .addon-card,
+  .info-card,
+  .value-card,
+  .tool-card,
+  .plant-card,
+  .quote-card,
+  .compare-card,
+  .contact-card,
+  .map-card,
+  .client-card,
+  .settings-card,
+  .dash-card,
+  .dash-pro-card,
+  .dash-user-card,
+  .kpi {
+    transition:
+      transform .55s var(--hover-ease),
+      box-shadow .55s var(--hover-ease),
+      border-color .35s ease,
+      background-color .35s ease,
+      filter .45s ease;
+  }
+
+  .card:hover,
+  .service-card:hover,
+  .project-card:hover,
+  .journal-card:hover,
+  .plan-card:hover,
+  .testimonial-card:hover,
+  .team-card:hover,
+  .step-card:hover,
+  .addon-card:hover,
+  .info-card:hover,
+  .value-card:hover,
+  .tool-card:hover,
+  .plant-card:hover,
+  .quote-card:hover,
+  .compare-card:hover,
+  .contact-card:hover,
+  .map-card:hover,
+  .client-card:hover,
+  .settings-card:hover,
+  .dash-card:hover,
+  .dash-pro-card:hover,
+  .dash-user-card:hover,
+  .kpi:hover {
+    transform: translateY(var(--hover-lift));
+    border-color: var(--hover-ring);
+    box-shadow: var(--hover-glow), inset 0 0 0 1px rgba(240, 214, 154, .1);
+  }
+
+  /* Keep the featured plan's raised baseline intact. */
+  .plan-card--featured:hover { transform: translateY(calc(-10px + var(--hover-lift))); }
+
+  /* Large dashboard panels only need a quiet edge glow. */
+  .panel:hover {
+    border-color: var(--hover-ring);
+    box-shadow: var(--hover-glow), inset 0 0 0 1px rgba(240, 214, 154, .08);
+  }
+
+  /* Image-led cards get a slow, cinematic zoom. */
+  .project-card img,
+  .journal-card img,
+  .team-card .team-media img,
+  .service-card > img,
+  .journal-media img,
+  .collage-frame img,
+  .error-frame img {
+    transition: transform 1.2s var(--hover-ease), filter .6s ease;
+  }
+
+  .project-card:hover img,
+  .journal-card:hover img,
+  .team-card:hover .team-media img,
+  .service-card:hover > img,
+  .journal-card:hover .journal-media img,
+  .collage-frame:hover img {
+    transform: scale(1.07);
+    filter: saturate(1.08);
+  }
+
+  /* Badges respond with the card. */
+  .icon-badge {
+    transition: transform .5s var(--hover-ease), background .4s ease, color .4s ease, box-shadow .4s ease;
+  }
+
+  :is(.card, .service-card, .project-card, .journal-card, .plan-card, .team-card,
+      .step-card, .addon-card, .info-card, .value-card, .tool-card, .plant-card,
+      .contact-card, .settings-card, .dash-card, .dash-pro-card, .kpi):hover .icon-badge {
+    transform: rotate(-6deg) scale(1.08);
+    box-shadow: 0 8px 18px -12px rgba(13, 31, 22, .55);
+  }
+
+  /* ------------------------------------------------------------------
+     Buttons and button-like controls
+     ------------------------------------------------------------------ */
+  .button {
+    transition:
+      transform .4s var(--hover-ease),
+      box-shadow .4s var(--hover-ease),
+      background .35s ease,
+      border-color .35s ease,
+      color .35s ease,
+      filter .35s ease;
+  }
+
+  .button:hover {
+    box-shadow:
+      0 22px 46px -22px rgba(13, 31, 22, .55),
+      0 0 0 1px rgba(240, 214, 154, .28),
+      0 0 26px -8px rgba(240, 214, 154, .48);
+  }
+
+  .button--ghost:hover {
+    background: rgba(255, 255, 255, .14);
+    box-shadow:
+      0 18px 38px -24px rgba(0, 0, 0, .7),
+      inset 0 0 0 1px rgba(240, 214, 154, .22);
+  }
+
+  .button--outline:hover { background: rgba(71, 122, 88, .07); }
+  .button--light:hover { background: #fff; }
+
+  .header-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 26px -18px rgba(0, 0, 0, .65), inset 0 0 0 1px rgba(240, 214, 154, .2);
+  }
+
+  .icon-btn:hover,
+  .dash-icon-btn:hover,
+  .dash-menu-btn:hover,
+  .modal-close:hover,
+  .drawer-close:hover,
+  .toast-close:hover {
+    transform: translateY(-3px) rotate(5deg);
+    box-shadow: 0 14px 28px -18px rgba(13, 31, 22, .55);
+  }
+
+  .demo-chip:hover,
+  .filter-btn:hover,
+  .dash-filter:hover,
+  .select-trigger:hover,
+  .billing-toggle button:hover,
+  .season-tab:hover,
+  .quote-arrow:hover,
+  .auth-back:hover {
+    transform: translateY(-2px);
+    border-color: var(--hover-ring);
+    box-shadow: 0 12px 26px -20px rgba(13, 31, 22, .55);
+  }
+
+  .faq-question:hover { background: rgba(255, 255, 255, .36); }
+  .faq-question:hover span { color: var(--forest-900); }
+
+  /* ------------------------------------------------------------------
+     Navigation points and text links
+     ------------------------------------------------------------------ */
+  .desktop-nav a {
+    transition:
+      color var(--t-fast),
+      background var(--t-fast),
+      transform .3s var(--hover-ease),
+      box-shadow .3s ease;
+  }
+
+  .desktop-nav a:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px -16px rgba(0, 0, 0, .75), inset 0 0 0 1px rgba(240, 214, 154, .12);
+  }
+
+  .footer-column a:hover {
+    color: var(--gold-200);
+    transform: translateX(5px);
+  }
+
+  .footer-bottom-links a,
+  .footer-column a,
+  .drawer-meta a,
+  .text-link,
+  .auth-switch a,
+  .auth-forgot,
+  .info-card a {
+    transition: color .3s ease, transform .3s var(--hover-ease), border-color .3s ease;
+  }
+
+  .footer-bottom-links a:hover { transform: translateY(-1px); }
+
+  .social-link:hover {
+    transform: translateY(-4px) scale(1.06);
+    box-shadow: 0 12px 24px -14px rgba(0, 0, 0, .6);
+  }
+
+  .drawer-actions .button:hover,
+  .drawer-meta a:hover { transform: translateX(3px); }
+
+  .brand:hover .brand-mark,
+  .auth-brand:hover .brand-mark,
+  .dash-brand:hover .dash-brand-mark {
+    transform: rotate(-5deg) scale(1.05);
+    box-shadow: 0 10px 22px -14px rgba(13, 31, 22, .6);
+  }
+
+  .brand-mark,
+  .dash-brand-mark {
+    transition: transform .4s var(--hover-ease), box-shadow .4s ease;
+  }
+
+  .toast {
+    transition: transform .35s var(--hover-ease), box-shadow .35s ease;
+  }
+
+  .toast:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 24px 50px -28px rgba(13, 31, 22, .65);
+  }
+
+  /* ------------------------------------------------------------------
+     List points, rows and chips
+     ------------------------------------------------------------------ */
+  .plan-list li,
+  .split-list li,
+  .tip-list li,
+  .service-features li,
+  .check-item,
+  .modal-facts li,
+  .footer-badges span {
+    transition: transform .3s var(--hover-ease), color .3s ease, border-color .3s ease, background-color .3s ease;
+  }
+
+  .plan-list li:hover,
+  .split-list li:hover,
+  .tip-list li:hover,
+  .service-features li:hover,
+  .check-item:hover,
+  .modal-facts li:hover {
+    transform: translateX(4px);
+    color: var(--forest-900);
+  }
+
+  .footer-badges span:hover {
+    transform: translateY(-2px);
+    border-color: rgba(240, 214, 154, .36);
+    background: rgba(255, 255, 255, .09);
+  }
+
+  .dash-table tbody tr {
+    transition: background .3s ease, box-shadow .3s ease;
+  }
+
+  .dash-table tbody tr:hover {
+    box-shadow: inset 3px 0 0 rgba(240, 214, 154, .75);
+  }
+
+  .appt,
+  .msg,
+  .service-row,
+  .activity-item,
+  .event-row,
+  .timeline-item {
+    transition: transform .35s var(--hover-ease), background-color .3s ease, border-color .3s ease, box-shadow .35s ease;
+  }
+
+  .appt:hover,
+  .msg:hover,
+  .service-row:hover {
+    transform: translateX(3px);
+    border-color: var(--hover-ring);
+    box-shadow: 0 16px 30px -26px rgba(13, 31, 22, .55);
+  }
+
+  .timeline-item:hover { transform: translateX(3px); }
+  .timeline-item:hover::before { box-shadow: 0 0 0 4px rgba(240, 214, 154, .2); }
+
+  .activity-item:hover .dash-activity-icon,
+  .activity-item:hover i {
+    transform: scale(1.08);
+  }
+
+  .activity-item i { transition: transform .35s var(--hover-ease); }
+
+  .check-chip:hover,
+  .role-opt:hover {
+    transform: translateY(-1px);
+    border-color: var(--hover-ring);
+  }
+
+  .role-opt,
+  .check-chip { transition: transform .3s var(--hover-ease), border-color .3s ease, background-color .3s ease; }
+
+  /* Card arrows and decorative links glide a little further. */
+  .project-arrow,
+  .project-card .project-arrow,
+  .service-link svg,
+  .text-link svg,
+  .hero-arch-note .icon {
+    transition: transform .4s var(--hover-ease), opacity .35s ease, background .35s ease, color .35s ease;
+  }
+
+  .project-card:hover .project-arrow { transform: translate(2px, -2px); }
+  .service-card:hover .service-link svg,
+  .text-link:hover svg { transform: translate(4px, -4px); }
+
+  /* Smaller feature blocks and error-page artwork. */
+  .stat,
+  .mini-stat,
+  .award-item,
+  .tip,
+  .next-step,
+  .collage-frame,
+  .season-panel,
+  .error-frame {
+    transition: transform .5s var(--hover-ease), box-shadow .5s var(--hover-ease), border-color .35s ease, background-color .35s ease;
+  }
+
+  .stat:hover,
+  .mini-stat:hover,
+  .award-item:hover,
+  .tip:hover,
+  .next-step:hover,
+  .collage-frame:hover,
+  .season-panel:hover,
+  .error-frame:hover {
+    transform: translateY(-5px);
+    border-color: var(--hover-ring);
+    box-shadow: var(--hover-glow);
+  }
+
+  .error-frame:hover { transform: translateY(-6px) rotate(-.35deg); }
+  .auth-visual-stats div { transition: transform .35s var(--hover-ease); }
+  .auth-visual-stats div:hover { transform: translateY(-2px); }
+  .auth-visual-stats div:hover b { color: #FFF3CF; }
+}
+
+/* Respect visitors who ask for less motion. */
+@media (prefers-reduced-motion: reduce) {
+  .card:hover,
+  .service-card:hover,
+  .project-card:hover,
+  .journal-card:hover,
+  .plan-card:hover,
+  .testimonial-card:hover,
+  .team-card:hover,
+  .step-card:hover,
+  .addon-card:hover,
+  .info-card:hover,
+  .value-card:hover,
+  .tool-card:hover,
+  .plant-card:hover,
+  .quote-card:hover,
+  .compare-card:hover,
+  .contact-card:hover,
+  .map-card:hover,
+  .client-card:hover,
+  .settings-card:hover,
+  .dash-card:hover,
+  .dash-pro-card:hover,
+  .dash-user-card:hover,
+  .kpi:hover,
+  .button:hover,
+  .icon-btn:hover,
+  .dash-icon-btn:hover,
+  .desktop-nav a:hover,
+  .footer-column a:hover,
+  .social-link:hover,
+  .plan-list li:hover,
+  .split-list li:hover,
+  .tip-list li:hover,
+  .service-features li:hover,
+  .check-item:hover,
+  .modal-facts li:hover,
+  .appt:hover,
+  .msg:hover,
+  .service-row:hover,
+  .timeline-item:hover,
+  .stat:hover,
+  .mini-stat:hover,
+  .award-item:hover,
+  .tip:hover,
+  .next-step:hover,
+  .collage-frame:hover,
+  .season-panel:hover,
+  .error-frame:hover,
+  .auth-visual-stats div:hover {
+    transform: none;
+  }
+
+  .project-card:hover img,
+  .journal-card:hover img,
+  .team-card:hover .team-media img,
+  .service-card:hover > img,
+  .journal-card:hover .journal-media img,
+  .collage-frame:hover img {
+    transform: none;
+  }
+}

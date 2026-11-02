@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Garden — Stackly Gardens &amp; Landscaping</title>
+  <meta name="description" content="Your Stackly garden workspace: care plan, bookings, invoices, messages, gallery and seasonal care calendar.">
+  <meta name="theme-color" content="#183326">
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/webp" href="assets/img/logo.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Manrope:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+  <link rel="stylesheet" href="assets/css/hover.css">
+</head>
+<body class="dash-body" data-page="customer">
+  <div class="dash" data-dashboard>
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="dash-side" aria-label="Garden navigation">
+      <div class="dash-brand-row">
+        <a class="dash-brand" href="customer-dashboard.html">
+          <span class="dash-brand-mark"><img src="assets/img/logo.webp" alt="Stackly" width="40" height="40"></span>
+          <span class="dash-brand-text"><b>STACKLY</b></span>
+        </a>
+        <button class="dash-side-close" type="button" data-sidebar-close aria-label="Close navigation">
+          <svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>
+        </button>
+      </div>
+
+      <nav class="dash-nav" data-dash-nav aria-label="Garden sections"></nav>
+
+      <div class="dash-side-foot">
+        <div class="dash-pro-card">
+          <span class="eyebrow eyebrow--light">Next visit</span>
+          <strong>Thursday 19 March</strong>
+          <p>Spring border edit with Richard. He will bring the new salvia and the mulch for the rose beds.</p>
+          <button class="button" type="button" data-dash-goto="sec-bookings">View all bookings</button>
+        </div>
+        <div class="dash-user-card">
+          <span class="avatar" data-user-initials>JW</span>
+          <div style="min-width:0"><b data-user-name>James Whitfield</b><span data-role-name>Garden client</span><span data-user-email>customer@stackly.demo</span></div>
+          <button class="dash-signout" type="button" data-logout aria-label="Sign out">
+            <svg class="icon" aria-hidden="true"><use href="#i-logOut"></use></svg>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <div class="dash-overlay" data-sidebar-overlay></div>
+
+    <!-- ================= MAIN ================= -->
+    <div class="dash-main">
+      <header class="dash-top">
+        <button class="dash-menu-btn" type="button" data-sidebar-toggle aria-label="Open navigation" aria-expanded="false">
+          <svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg>
+        </button>
+        <div class="dash-crumb">
+          <span>My garden <svg class="icon" aria-hidden="true"><use href="#i-chevronRight"></use></svg></span>
+          <b data-crumb-title>Overview</b>
+        </div>
+        <div class="dash-top-actions">
+          <button class="dash-icon-btn" type="button" data-dash-404 aria-label="Notifications">
+            <svg class="icon" aria-hidden="true"><use href="#i-bell"></use></svg><span class="dot" aria-hidden="true"></span>
+          </button>
+          <button class="dash-icon-btn" type="button" data-dash-404 aria-label="Garden help">
+            <svg class="icon" aria-hidden="true"><use href="#i-help"></use></svg>
+          </button>
+        </div>
+      </header>
+
+      <main class="dash-content">
+        <!-- ================= OVERVIEW ================= -->
+        <section class="dash-section is-active" id="sec-overview" aria-labelledby="overview-title">
+          <div class="dash-page-head">
+            <div>
+              <span class="eyebrow">Your garden today</span>
+              <h1 id="overview-title"><span data-greeting>Good morning</span>, <em>Eleanor.</em></h1>
+              <p>The Willow House is waking up. The spring border edit is booked, the tulips are through, and your care team has left three notes for the week.</p>
+            </div>
+            <div class="dash-head-actions">
+              <button class="button button--dark" type="button" data-dash-goto="sec-bookings">Book a visit <svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg></button>
+              <button class="button button--outline" type="button" data-dash-goto="sec-messages">Message the studio</button>
+            </div>
+          </div>
+
+          <div class="kpi-grid">
+            <article class="kpi">
+              <div class="kpi-top"><span class="kpi-ico kpi-ico--gold"><svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg></span><span class="kpi-trend"><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg> 7 days</span></div>
+              <strong>19</strong><span>Next garden visit</span><div class="kpi-foot"><b>Thursday</b> · 09:00</div>
+            </article>
+            <article class="kpi">
+              <div class="kpi-top"><span class="kpi-ico"><svg class="icon" aria-hidden="true"><use href="#i-layers"></use></svg></span><span class="kpi-trend"><svg class="icon" aria-hidden="true"><use href="#i-trendingUp"></use></svg> 72%</span></div>
+              <strong>72%</strong><span>Spring care complete</span><div class="kpi-foot"><b>4</b> tasks remaining</div>
+            </article>
+            <article class="kpi">
+              <div class="kpi-top"><span class="kpi-ico kpi-ico--copper"><svg class="icon" aria-hidden="true"><use href="#i-wallet"></use></svg></span><span class="kpi-trend"><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg> Due soon</span></div>
+              <strong>1</strong><span>Open invoice</span><div class="kpi-foot"><b>£340</b> · due 31 Mar</div>
+            </article>
+            <article class="kpi">
+              <div class="kpi-top"><span class="kpi-ico kpi-ico--info"><svg class="icon" aria-hidden="true"><use href="#i-message"></use></svg></span><span class="kpi-trend"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg> 2 new</span></div>
+              <strong>2</strong><span>Messages from the studio</span><div class="kpi-foot">Richard &amp; Amelia</div>
+            </article>
+          </div>
+
+          <div class="garden-hero">
+            <img src="assets/img/garden-walk.webp" alt="The grass path through the Willow House garden in early spring" width="1200" height="800" loading="lazy" decoding="async">
+            <span class="eyebrow eyebrow--light">The Willow House</span>
+            <h2>A garden in its fourth spring.</h2>
+            <p>One hundred and forty metres of border, a walled kitchen garden, an old orchard and a lawn that is slowly becoming a meadow at the far end.</p>
+            <div class="garden-stats">
+              <span class="chip chip--dark">1.8 acres</span>
+              <span class="chip chip--dark">Cotswolds</span>
+              <span class="chip chip--dark">Signature care</span>
+              <span class="chip chip--dark">Since 2022</span>
+            </div>
+          </div>
+
+          <div class="dash-grid dash-grid--sidebar">
+            <section class="panel" aria-labelledby="plan-mini-title">
+              <div class="panel-head">
+                <div><h3 id="plan-mini-title">Your care plan</h3><p>Signature · year-round tending</p></div>
+                <button class="text-link" type="button" data-dash-goto="sec-plans">View plan <svg class="icon" aria-hidden="true"><use href="#i-arrowRight"></use></svg></button>
+              </div>
+              <div class="plan-summary">
+                <div class="ring" data-value="72"><b>72%<small>Season</small></b></div>
+                <div class="plan-summary-copy"><b>Spring programme</b><span>Border edit, rose feed, mulch and bulb deadheading</span></div>
+                <button class="button button--outline" type="button" data-dash-goto="sec-care">Care calendar</button>
+              </div>
+              <div class="progress-list" style="margin-top:1rem">
+                <div class="progress-item"><div class="meter"><div class="meter-head"><span>Ornamental borders</span><b>84%</b></div><div class="meter-track"><span class="meter-fill" data-meter="84"></span></div></div></div>
+                <div class="progress-item"><div class="meter"><div class="meter-head"><span>Kitchen garden</span><b>68%</b></div><div class="meter-track"><span class="meter-fill" data-meter="68"></span></div></div></div>
+                <div class="progress-item"><div class="meter"><div class="meter-head"><span>Lawn &amp; meadow</span><b>52%</b></div><div class="meter-track"><span class="meter-fill" data-meter="52"></span></div></div></div>
+              </div>
+            </section>
+
+            <section class="panel" aria-labelledby="next-visits-title">
+              <div class="panel-head"><div><h3 id="next-visits-title">Coming up</h3><p>Your next three visits</p></div></div>
+              <div class="appt-list">
+                <div class="appt"><div class="appt-date"><b>19</b><span>Mar</span></div><div class="appt-copy"><b>Spring border edit</b><span><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg> 09:00 · Richard</span></div><span class="badge badge--gold">Confirmed</span></div>
+                <div class="appt"><div class="appt-date"><b>26</b><span>Mar</span></div><div class="appt-copy"><b>Rose feed &amp; mulch</b><span><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg> 09:00 · James</span></div><span class="badge">Confirmed</span></div>
+                <div class="appt"><div class="appt-date"><b>02</b><span>Apr</span></div><div class="appt-copy"><b>Kitchen garden sowing</b><span><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg> 10:00 · Garden team</span></div><span class="badge badge--muted">Planned</span></div>
+              </div>
+            </section>
+          </div>
+
+          <div class="dash-grid dash-grid--2">
+            <section class="panel" aria-labelledby="notes-title">
+              <div class="panel-head"><div><h3 id="notes-title">Notes from the garden</h3><p>Latest from your care team</p></div><button class="text-link" type="button" data-dash-goto="sec-gallery">See photos <svg class="icon" aria-hidden="true"><use href="#i-arrowRight"></use></svg></button></div>
+              <div class="activity">
+                <div class="activity-item"><i><svg class="icon" aria-hidden="true"><use href="#i-sprout"></use></svg></i><div class="activity-copy"><b>The tulips are through in the walled garden</b><span>James · 2 days ago · 6 photos added</span></div></div>
+                <div class="activity-item"><i><svg class="icon" aria-hidden="true"><use href="#i-flower"></use></svg></i><div class="activity-copy"><b>First hellebore flowers open by the path</b><span>Richard · 4 days ago</span></div></div>
+                <div class="activity-item"><i><svg class="icon" aria-hidden="true"><use href="#i-droplet"></use></svg></i><div class="activity-copy"><b>Irrigation checked and set for spring</b><span>Garden team · last week</span></div></div>
+              </div>
+            </section>
+
+            <section class="panel" aria-labelledby="tips-title">
+              <div class="panel-head"><div><h3 id="tips-title">This week in your garden</h3><p>Small things worth doing now</p></div></div>
+              <div class="tip-list">
+                <div class="tip tip--gold"><i><svg class="icon" aria-hidden="true"><use href="#i-scissors"></use></svg></i><div><b>Deadhead the daffodils</b><p>Leave the foliage for six weeks — the bulbs are storing next spring.</p></div></div>
+                <div class="tip"><i><svg class="icon" aria-hidden="true"><use href="#i-droplet"></use></svg></i><div><b>Water the new plantings</b><p>Twice a week if the weather stays dry, slowly at the root ball.</p></div></div>
+                <div class="tip"><i><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></i><div><b>Watch the walled garden</b><p>Slugs are active after rain. A evening torchlight walk is the kindest control.</p></div></div>
+              </div>
+            </section>
+          </div>
+
+          <div class="dash-note" style="margin-top:1rem">
+            <svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg>
+            <span>This is a demonstration garden. All visits, invoices and notes are fictional, and nothing leaves your browser.</span>
+          </div>
+        </section>
+
+        <!-- ================= GARDEN PROFILE ================= -->
+        <section class="dash-section" id="sec-garden" aria-labelledby="garden-title">
+          <div class="dash-page-head">
+            <div>
+              <span class="eyebrow">Garden profile</span>
+              <h1 id="garden-title">The Willow <em>House.</em></h1>
+              <p>Everything the studio knows about your garden: its soil, light, rooms and the plants that have made it home.</p>
+            </div>
+            <div class="dash-head-actions">
+              <button class="button button--outline" type="button" data-dash-404>Download garden record</button>
+            </div>
+          </div>
+
+          <div class="garden-hero">
+            <img src="assets/img/garden-estate.webp" alt="The Willow House garden with its clipped hedges and long lawn" width="1170" height="658" loading="lazy" decoding="async">
+            <span class="eyebrow eyebrow--light">Cotswolds · since 2022</span>
+            <h2>A walled garden with long views.</h2>
+            <p>A seventeenth-century house, a garden that had grown inward, and a new spine of yew, stone and meadow that gives the whole place room to breathe.</p>
+            <div class="garden-stats">
+              <span class="chip chip--dark">1.8 acres</span>
+              <span class="chip chip--dark">South-west aspect</span>
+              <span class="chip chip--dark">Clay loam</span>
+              <span class="chip chip--dark">4 garden rooms</span>
+            </div>
+          </div>
+
+          <div class="dash-grid dash-grid--sidebar">
+            <section class="panel" aria-labelledby="zones-title">
+              <div class="panel-head"><div><h3 id="zones-title">Garden rooms</h3><p>How the garden is divided and tended</p></div><span class="badge badge--gold">4 zones</span></div>
+              <div class="progress-list">
+                <div class="progress-item"><div class="meter"><div class="meter-head"><span>Walled kitchen garden</span><b>Healthy</b></div><div class="meter-track"><span class="meter-fill" data-meter="88"></span></div></div><p class="field-hint">Espaliered apple, herbs, cutting beds and a restored glasshouse.</p></div>
+                <div class="progress-item"><div class="meter"><div class="meter-head"><span>Long herbaceous border</span><b>Establishing</b></div><div class="meter-track"><span class="meter-fill" data-meter="74"></span></div></div><p class="field-hint">A matrix of grasses and perennials, planted spring 2025.</p></div>
+                <div class="progress-item"><div class="meter"><div class="meter-head"><span>Orchard &amp; meadow</span><b>Wild</b></div><div class="meter-track"><span class="meter-fill" data-meter="62"></span></div></div><p class="field-hint">Hay meadow with a mown path and eight heritage fruit trees.</p></div>
+                <div class="progress-item"><div class="meter"><div class="meter-head"><span>Stone terrace &amp; pergola</span><b>Healthy</b></div><div class="meter-track"><span class="meter-fill" data-meter="94"></span></div></div><p class="field-hint">York stone, oak pergola, climbers and evening lighting.</p></div>
+              </div>
+            </section>
+
+            <section class="panel" aria-labelledby="garden-facts-title">
+              <div class="panel-head"><div><h3 id="garden-facts-title">Garden facts</h3><p>For the studio record</p></div></div>
+              <div class="table-wrap">
+                <table class="dash-table dash-table--compact">
+                  <tbody>
+                    <tr><th scope="row">Soil</th><td>Clay loam, pH 6.4</td></tr>
+                    <tr><th scope="row">Aspect</th><td>South-west</td></tr>
+                    <tr><th scope="row">Water</th><td>Rain-fed, drip irrigation in beds</td></tr>
+                    <tr><th scope="row">Mower access</th><td>Via east gate, 1.2m width</td></tr>
+                    <tr><th scope="row">Designer</th><td>Eleanor Hart</td></tr>
+                    <tr><th scope="row">Lead gardener</th><td>Richard Sloane</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </div>
+
+          <section class="panel" style="margin-top:1rem" aria-labelledby="planting-title">
+            <div class="panel-head"><div><h3 id="planting-title">Planting record</h3><p>A selection of what is growing, and where</p></div><span class="badge badge--muted">Demo data</span></div>
+            <div class="table-wrap">
+              <table class="dash-table">
+                <thead><tr><th scope="col">Plant</th><th scope="col">Zone</th><th scope="col">Planted</th><th scope="col">Care note</th></tr></thead>
+                <tbody>
+                  <tr><td><div class="cell-main"><img src="assets/img/plant-leaf.webp" alt="" width="34" height="34" loading="lazy"><div><b>Salvia 'Amistad'</b><span>Perennial</span></div></div></td><td>Long border</td><td>2025</td><td>Leave seed heads for the birds.</td></tr>
+                  <tr><td><div class="cell-main"><img src="assets/img/plant-pot.webp" alt="" width="34" height="34" loading="lazy"><div><b>Rosa 'Desdemona'</b><span>Shrub rose</span></div></div></td><td>Walled garden</td><td>2023</td><td>Feed in March; prune after flowering.</td></tr>
+                  <tr><td><div class="cell-main"><img src="assets/img/plant-succulent.webp" alt="" width="34" height="34" loading="lazy"><div><b>Helleborus foetidus</b><span>Evergreen</span></div></div></td><td>Shade path</td><td>2024</td><td>Self-seeds freely; edit seedlings in spring.</td></tr>
+                  <tr><td><div class="cell-main"><img src="assets/img/flower-bloom.webp" alt="" width="34" height="34" loading="lazy"><div><b>Tulipa 'Spring Green'</b><span>Bulb</span></div></div></td><td>Walled garden</td><td>2025</td><td>Lift and store after foliage dies down.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+
+        <!-- ================= BOOKINGS ================= -->
+        <section class="dash-section" id="sec-bookings" aria-labelledby="bookings-title">
+          <div class="dash-page-head">
+            <div>
+              <span class="eyebrow">Garden calendar</span>
+              <h1 id="bookings-title">Bookings &amp; <em>visits.</em></h1>
+              <p>Your care visits, past and upcoming. Request an extra visit when the garden needs a hand.</p>
+            </div>
+            <div class="dash-head-actions">
+              <button class="button button--dark" type="button" data-dash-404>Request a visit <svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg></button>
+            </div>
+          </div>
+
+          <div class="dash-toolbar">
+            <div class="dash-search">
+              <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>
+              <input class="input" type="search" placeholder="Search visits or gardeners" aria-label="Search bookings" data-dash-search="sec-bookings">
+            </div>
+            <div class="dash-toolbar-chips" data-dash-filter-group>
+              <button class="dash-filter is-active" type="button" data-dash-filter="all" data-dash-filter-target="sec-bookings">All</button>
+              <button class="dash-filter" type="button" data-dash-filter="confirmed" data-dash-filter-target="sec-bookings">Confirmed</button>
+              <button class="dash-filter" type="button" data-dash-filter="pending" data-dash-filter-target="sec-bookings">Pending</button>
+              <button class="dash-filter" type="button" data-dash-filter="completed" data-dash-filter-target="sec-bookings">Past</button>
+            </div>
+          </div>
+
+          <section class="panel" aria-labelledby="bookings-table-title">
+            <div class="panel-head"><div><h3 id="bookings-table-title">Care visits</h3><p>Signature plan · two visits each month</p></div><span class="badge badge--gold">2 upcoming</span></div>
+            <div class="table-wrap">
+              <table class="dash-table">
+                <thead><tr><th scope="col">Visit</th><th scope="col">Gardener</th><th scope="col">Date</th><th scope="col">Status</th><th scope="col"><span class="sr-only">Actions</span></th></tr></thead>
+                <tbody>
+                  <tr data-search-item data-status="pending">
+                    <td><div class="cell-main"><img src="assets/img/garden-care.webp" alt="" width="34" height="34" loading="lazy"><div><b>Extra spring tidy</b><span>Border edges &amp; gravel paths</span></div></div></td><td>Richard S.</td><td>15 Mar · 09:00</td><td><span class="badge badge--copper">Pending</span></td>
+                    <td class="actions"><button class="dash-icon-btn" type="button" data-dash-404 aria-label="Change tidy visit"><svg class="icon" aria-hidden="true"><use href="#i-pen"></use></svg></button></td>
+                  </tr>
+                  <tr data-search-item data-status="confirmed">
+                    <td><div class="cell-main"><img src="assets/img/flower-garden.webp" alt="" width="34" height="34" loading="lazy"><div><b>Spring border edit</b><span>Cut back, divide, feed &amp; mulch</span></div></div></td><td>Richard S.</td><td>19 Mar · 09:00</td><td><span class="badge">Confirmed</span></td>
+                    <td class="actions"><button class="dash-icon-btn" type="button" data-dash-404 aria-label="Change border visit"><svg class="icon" aria-hidden="true"><use href="#i-pen"></use></svg></button></td>
+                  </tr>
+                  <tr data-search-item data-status="confirmed">
+                    <td><div class="cell-main"><img src="assets/img/garden-tools2.webp" alt="" width="34" height="34" loading="lazy"><div><b>Rose feed &amp; mulch</b><span>Walled garden &amp; long border</span></div></div></td><td>James W.</td><td>26 Mar · 09:00</td><td><span class="badge">Confirmed</span></td>
+                    <td class="actions"><button class="dash-icon-btn" type="button" data-dash-404 aria-label="Change rose visit"><svg class="icon" aria-hidden="true"><use href="#i-pen"></use></svg></button></td>
+                  </tr>
+                  <tr data-search-item data-status="completed">
+                    <td><div class="cell-main"><img src="assets/img/garden-lawn.webp" alt="" width="34" height="34" loading="lazy"><div><b>Lawn first cut</b><span>Mowing height raised for spring</span></div></div></td><td>Garden team</td><td>5 Mar · 10:00</td><td><span class="badge badge--muted">Completed</span></td>
+                    <td class="actions"><button class="dash-icon-btn" type="button" data-dash-404 aria-label="View lawn visit note"><svg class="icon" aria-hidden="true"><use href="#i-fileText"></use></svg></button></td>
+                  </tr>
+                  <tr data-search-item data-status="completed">
+                    <td><div class="cell-main"><img src="assets/img/garden-water.webp" alt="" width="34" height="34" loading="lazy"><div><b>Irrigation commissioning</b><span>Drip lines checked and set</span></div></div></td><td>James W.</td><td>28 Feb · 08:30</td><td><span class="badge badge--muted">Completed</span></td>
+                    <td class="actions"><button class="dash-icon-btn" type="button" data-dash-404 aria-label="View irrigation visit note"><svg class="icon" aria-hidden="true"><use href="#i-fileText"></use></svg></button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="dash-empty" data-search-empty hidden>
+              <i><svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg></i>
+              <b>No visits match that search</b>
+              <p>Try a date, gardener or job name.</p>
+            </div>
+          </section>
+
+          <div class="dash-grid dash-grid--2">
+            <section class="panel"><div class="panel-head"><div><h3>Visit rhythm</h3><p>How your care plan works</p></div></div><div class="tip-list"><div class="tip tip--gold"><i><svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg></i><div><b>Two visits a month</b><p>The growing season adds a third when the borders need it.</p></div></div><div class="tip"><i><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg></i><div><b>Mornings suit the garden</b><p>We arrive early to work in the cool and leave before lunch.</p></div></div><div class="tip"><i><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></i><div><b>Same hands, same notes</b><p>Richard leads every visit so nothing gets lost between them.</p></div></div></div></section>
+            <section class="panel panel--dark"><div class="panel-head"><div><h3>Need something extra?</h3><p>Planting, a party, a problem area.</p></div></div><p style="font-size:.75rem;margin:0 0 .9rem">Extra visits start at £180 and are confirmed within one working day. Design work is quoted separately.</p><button class="button" type="button" data-dash-404>Request an extra visit <svg class="icon" aria-hidden="true"><use href="#i-arrowRight"></use></svg></button></section>
+          </div>
+        </section>
+
+        <!-- ================= CARE PLAN ================= -->
+        <section class="dash-section" id="sec-plans" aria-labelledby="plans-title">
+          <div class="dash-page-head">
+            <div>
+              <span class="eyebrow">Your care plan</span>
+              <h1 id="plans-title">Signature <em>care.</em></h1>
+              <p>A year-round rhythm of visits, seasonal edits and honest advice. Your plan renews each March.</p>
+            </div>
+            <div class="dash-head-actions">
+              <button class="button button--outline" type="button" data-dash-404>Change plan</button>
+            </div>
+          </div>
+
+          <div class="dash-grid dash-grid--sidebar">
+            <section class="panel" aria-labelledby="plan-detail-title">
+              <div class="panel-head"><div><h3 id="plan-detail-title">What is included</h3><p>Signature · family garden</p></div><span class="badge badge--gold">Active</span></div>
+              <ul class="service-features" style="display:grid;gap:.55rem;padding:0;margin:0;list-style:none">
+                <li style="display:flex;gap:.55rem;align-items:flex-start;font-size:.78rem;color:var(--text-soft)"><svg class="icon" aria-hidden="true" style="width:15px;height:15px;color:var(--gold-600);flex:none;margin-top:.15rem"><use href="#i-check"></use></svg> Weekly visits in the growing season</li>
+                <li style="display:flex;gap:.55rem;align-items:flex-start;font-size:.78rem;color:var(--text-soft)"><svg class="icon" aria-hidden="true" style="width:15px;height:15px;color:var(--gold-600);flex:none;margin-top:.15rem"><use href="#i-check"></use></svg> Border editing and specialist pruning</li>
+                <li style="display:flex;gap:.55rem;align-items:flex-start;font-size:.78rem;color:var(--text-soft)"><svg class="icon" aria-hidden="true" style="width:15px;height:15px;color:var(--gold-600);flex:none;margin-top:.15rem"><use href="#i-check"></use></svg> Lawn, hedge and irrigation care</li>
+                <li style="display:flex;gap:.55rem;align-items:flex-start;font-size:.78rem;color:var(--text-soft)"><svg class="icon" aria-hidden="true" style="width:15px;height:15px;color:var(--gold-600);flex:none;margin-top:.15rem"><use href="#i-check"></use></svg> Priority design advice and plant sourcing</li>
+                <li style="display:flex;gap:.55rem;align-items:flex-start;font-size:.78rem;color:var(--text-soft)"><svg class="icon" aria-hidden="true" style="width:15px;height:15px;color:var(--gold-600);flex:none;margin-top:.15rem"><use href="#i-check"></use></svg> Quarterly garden health report</li>
+              </ul>
+              <div class="mini-stats" style="margin-top:1.1rem">
+                <div class="mini-stat"><b>£340</b><span>Per month</span></div>
+                <div class="mini-stat"><b>19</b><span>Visits this year</span></div>
+                <div class="mini-stat"><b>4th</b><span>Season with us</span></div>
+              </div>
+            </section>
+
+            <section class="panel" aria-labelledby="billing-title">
+              <div class="panel-head"><div><h3 id="billing-title">Billing</h3><p>Monthly · cancel anytime</p></div></div>
+              <div class="table-wrap">
+                <table class="dash-table dash-table--compact">
+                  <tbody>
+                    <tr><th scope="row">Next payment</th><td>1 April 2026</td></tr>
+                    <tr><th scope="row">Amount</th><td class="num">£340.00</td></tr>
+                    <tr><th scope="row">Method</th><td>Visa ending 4242</td></tr>
+                    <tr><th scope="row">Started</th><td>March 2022</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <button class="button button--outline button--block" type="button" data-dash-goto="sec-invoices" style="margin-top:.9rem">View invoices</button>
+              <div class="dash-note" style="margin-top:.8rem"><svg class="icon" aria-hidden="true"><use href="#i-info"></use></svg><span>Demonstration billing only. No card is charged.</span></div>
+            </section>
+          </div>
+
+          <section class="panel" style="margin-top:1rem" aria-labelledby="season-rhythm-title">
+            <div class="panel-head"><div><h3 id="season-rhythm-title">The year ahead</h3><p>What we will do, season by season</p></div></div>
+            <div class="dash-grid dash-grid--3" style="margin-top:0">
+              <div><span class="badge badge--gold">Spring</span><div class="tip-list" style="margin-top:.6rem"><div class="tip"><i><svg class="icon" aria-hidden="true"><use href="#i-sprout"></use></svg></i><div><b>Wake the borders</b><p>Cut back, divide, feed and mulch. Sow the kitchen garden.</p></div></div></div></div>
+              <div><span class="badge">Summer</span><div class="tip-list" style="margin-top:.6rem"><div class="tip"><i><svg class="icon" aria-hidden="true"><use href="#i-sun"></use></svg></i><div><b>Keep the rhythm</b><p>Deadhead, stake, water and mow. Meadow cut in late July.</p></div></div></div></div>
+              <div><span class="badge badge--copper">Autumn</span><div class="tip-list" style="margin-top:.6rem"><div class="tip"><i><svg class="icon" aria-hidden="true"><use href="#i-leaf"></use></svg></i><div><b>Gather &amp; plant</b><p>Bulbs, leaf mould, hedge cut and the last border edit.</p></div></div></div></div>
+            </div>
+          </section>
+        </section>
+
+        <!-- ================= INVOICES ================= -->
+        <section class="dash-section" id="sec-invoices" aria-labelledby="invoices-title">
+          <div class="dash-page-head">
+            <div>
+              <span class="eyebrow">Accounts</span>
+              <h1 id="invoices-title">Invoices &amp; <em>payments.</em></h1>
+              <p>Your care plan and any extra work, in one clear record. Demo invoices are never payable.</p>
+            </div>
+            <div class="dash-head-actions">
+              <button class="button button--outline" type="button" data-dash-404>Download statement <svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg></button>
+            </div>
+          </div>
+
+          <div class="dash-grid dash-grid--sidebar">
+            <section class="panel" aria-labelledby="invoice-table-title">
+              <div class="panel-head"><div><h3 id="invoice-table-title">Invoice history</h3><p>Last six months</p></div><span class="badge badge--muted">Demo data</span></div>
+              <div class="table-wrap">
+                <table class="dash-table">
+                  <thead><tr><th scope="col">Invoice</th><th scope="col">Period</th><th scope="col">Amount</th><th scope="col">Status</th><th scope="col"><span class="sr-only">Actions</span></th></tr></thead>
+                  <tbody>
+                    <tr><td><div class="cell-main"><span class="icon-badge" style="width:30px;height:30px;border-radius:8px"><svg class="icon" aria-hidden="true" style="width:14px;height:14px"><use href="#i-fileText"></use></svg></span><div><b>#INV-0482</b><span>Due 31 March 2026</span></div></div></td><td>April care</td><td class="num">£340.00</td><td><span class="badge badge--gold">Due</span></td><td class="actions"><button class="dash-icon-btn" type="button" data-dash-404 aria-label="Download invoice 0482"><svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg></button></td></tr>
+                    <tr><td><div class="cell-main"><span class="icon-badge" style="width:30px;height:30px;border-radius:8px"><svg class="icon" aria-hidden="true" style="width:14px;height:14px"><use href="#i-fileText"></use></svg></span><div><b>#INV-0471</b><span>Paid 1 March 2026</span></div></div></td><td>March care</td><td class="num">£340.00</td><td><span class="badge badge--muted">Paid</span></td><td class="actions"><button class="dash-icon-btn" type="button" data-dash-404 aria-label="Download invoice 0471"><svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg></button></td></tr>
+                    <tr><td><div class="cell-main"><span class="icon-badge" style="width:30px;height:30px;border-radius:8px"><svg class="icon" aria-hidden="true" style="width:14px;height:14px"><use href="#i-fileText"></use></svg></span><div><b>#INV-0459</b><span>Paid 1 February 2026</span></div></div></td><td>February care</td><td class="num">£340.00</td><td><span class="badge badge--muted">Paid</span></td><td class="actions"><button class="dash-icon-btn" type="button" data-dash-404 aria-label="Download invoice 0459"><svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg></button></td></tr>
+                    <tr><td><div class="cell-main"><span class="icon-badge" style="width:30px;height:30px;border-radius:8px"><svg class="icon" aria-hidden="true" style="width:14px;height:14px"><use href="#i-fileText"></use></svg></span><div><b>#INV-0443</b><span>Paid 1 January 2026</span></div></div></td><td>Winter care</td><td class="num">£340.00</td><td><span class="badge badge--muted">Paid</span></td><td class="actions"><button class="dash-icon-btn" type="button" data-dash-404 aria-label="Download invoice 0443"><svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg></button></td></tr>
+                    <tr><td><div class="cell-main"><span class="icon-badge" style="width:30px;height:30px;border-radius:8px"><svg class="icon" aria-hidden="true" style="width:14px;height:14px"><use href="#i-fileText"></use></svg></span><div><b>#INV-0428</b><span>Paid 1 December 2025</span></div></div></td><td>December care</td><td class="num">£340.00</td><td><span class="badge badge--muted">Paid</span></td><td class="actions"><button class="dash-icon-btn" type="button" data-dash-404 aria-label="Download invoice 0428"><svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg></button></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <div style="display:grid;gap:.8rem">
+              <section class="panel panel--dark" aria-labelledby="due-title">
+                <div class="panel-head"><div><h3 id="due-title">Next payment</h3><p>Demo billing only</p></div></div>
+                <div class="invoice-total"><span>Due 31 March 2026</span><b>£340.00</b></div>
+                <button class="button button--block" type="button" data-dash-404 style="margin-top:.8rem">Pay invoice</button>
+              </section>
+              <section class="panel" aria-labelledby="method-title">
+                <div class="panel-head"><div><h3 id="method-title">Payment method</h3></div></div>
+                <div class="service-row"><span class="icon-badge" style="width:42px;height:42px;border-radius:12px"><svg class="icon" aria-hidden="true" style="width:18px;height:18px"><use href="#i-wallet"></use></svg></span><div><b>Visa ending 4242</b><span>Expires 08 / 28</span></div><span class="badge">Default</span></div>
+                <button class="button button--outline button--block" type="button" data-dash-404 style="margin-top:.8rem">Update card</button>
+              </section>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= MESSAGES ================= -->
+        <section class="dash-section" id="sec-messages" aria-labelledby="messages-title">
+          <div class="dash-page-head">
+            <div>
+              <span class="eyebrow">The studio</span>
+              <h1 id="messages-title">Messages &amp; <em>notes.</em></h1>
+              <p>A quiet line to your garden team. Messages are answered within one working day, usually sooner.</p>
+            </div>
+            <div class="dash-head-actions">
+              <span class="badge badge--gold">2 unread</span>
+            </div>
+          </div>
+
+          <div class="dash-grid dash-grid--sidebar">
+            <section class="panel" aria-labelledby="inbox-title">
+              <div class="panel-head"><div><h3 id="inbox-title">Inbox</h3><p>Your latest conversations</p></div></div>
+              <div class="msg-list" data-message-list>
+                <div class="msg is-unread"><span class="avatar">RS</span><div class="msg-copy"><b>Richard Sloane <span>09:12</span></b><p>The border edit is confirmed for Thursday. I will bring the salvia and a little extra mulch for the roses.</p></div><span class="msg-dot" aria-hidden="true"></span></div>
+                <div class="msg is-unread"><span class="avatar">AM</span><div class="msg-copy"><b>Amelia Moore <span>Yesterday</span></b><p>I have added the new planting plan for the walled garden. Have a look when you have a moment — no rush.</p></div><span class="msg-dot" aria-hidden="true"></span></div>
+                <div class="msg"><span class="avatar">EH</span><div class="msg-copy"><b>Eleanor Hart <span>Mon</span></b><p>Lovely to see the tulips coming through. The walled garden is going to be extraordinary this year.</p></div></div>
+                <div class="msg"><span class="avatar">JW</span><div class="msg-copy"><b>James Whitfield <span>Last week</span></b><p>Irrigation is set. I have left a note on the tap for the warmer weeks — just a quarter turn.</p></div></div>
+              </div>
+            </section>
+
+            <section class="panel" aria-labelledby="compose-title">
+              <div class="panel-head"><div><h3 id="compose-title">Write a note</h3><p>To the garden team</p></div></div>
+              <form class="settings-form" data-message-form>
+                <div class="field">
+                  <label class="form-label" for="message-text">Your message</label>
+                  <textarea class="textarea" id="message-text" name="message" placeholder="Could we add a little colour by the east gate?" aria-describedby="message-hint"></textarea>
+                  <p class="field-hint" id="message-hint">This is a demo — messages stay in this browser.</p>
+                </div>
+                <button class="button button--dark" type="submit">Send note <svg class="icon" aria-hidden="true"><use href="#i-send"></use></svg></button>
+              </form>
+              <div class="dash-note" style="margin-top:.9rem"><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg><span>Studio hours: Mon–Sat, 7:30 am – 6:00 pm.</span></div>
+            </section>
+          </div>
+        </section>
+
+        <!-- ================= GALLERY ================= -->
+        <section class="dash-section" id="sec-gallery" aria-labelledby="gallery-title">
+          <div class="dash-page-head">
+            <div>
+              <span class="eyebrow">The garden in pictures</span>
+              <h1 id="gallery-title">Garden <em>gallery.</em></h1>
+              <p>Photographs from your care visits, arranged by season. Every image is a real Stackly garden, used here for the demonstration.</p>
+            </div>
+            <div class="dash-head-actions">
+              <button class="button button--outline" type="button" data-dash-404>Upload a photo <svg class="icon" aria-hidden="true"><use href="#i-upload"></use></svg></button>
+            </div>
+          </div>
+
+          <div class="dash-gallery">
+            <a href="404dash.html" aria-label="Open spring border photograph"><img src="assets/img/garden-estate.webp" alt="The long view across the Willow House garden" width="1170" height="658" loading="lazy" decoding="async"><span class="dash-gallery-tag">Spring · the long view</span></a>
+            <a href="404dash.html" aria-label="Open courtyard photograph"><img src="assets/img/garden-hidcote.webp" alt="The courtyard path in dappled light" width="685" height="1023" loading="lazy" decoding="async"><span class="dash-gallery-tag">Courtyard</span></a>
+            <a href="404dash.html" aria-label="Open border photograph"><img src="assets/img/flower-garden.webp" alt="Layered colour in the long border" width="1000" height="666" loading="lazy" decoding="async"><span class="dash-gallery-tag">High summer</span></a>
+            <a href="404dash.html" aria-label="Open pergola photograph"><img src="assets/img/garden-pergola.webp" alt="The oak pergola and gravel path" width="1000" height="670" loading="lazy" decoding="async"><span class="dash-gallery-tag">The pergola</span></a>
+            <a href="404dash.html" aria-label="Open glasshouse photograph"><img src="assets/img/garden-greenhouse.webp" alt="The restored glasshouse in the kitchen garden" width="1000" height="667" loading="lazy" decoding="async"><span class="dash-gallery-tag">Glasshouse</span></a>
+            <a href="404dash.html" aria-label="Open meadow photograph"><img src="assets/img/garden-meadow.webp" alt="The meadow path leading to the orchard" width="1100" height="734" loading="lazy" decoding="async"><span class="dash-gallery-tag">Orchard meadow</span></a>
+          </div>
+
+          <div class="dash-note" style="margin-top:1rem"><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg><span>New photographs are added after each care visit. The gallery is for viewing only in this demo.</span></div>
+        </section>
+
+        <!-- ================= CARE CALENDAR ================= -->
+        <section class="dash-section" id="sec-care" aria-labelledby="care-title">
+          <div class="dash-page-head">
+            <div>
+              <span class="eyebrow">Seasonal care</span>
+              <h1 id="care-title">Care <em>calendar.</em></h1>
+              <p>The small jobs that make the biggest difference, ordered by the season. Tick them off as you go — it is a demo, so nothing is saved.</p>
+            </div>
+            <div class="dash-head-actions">
+              <button class="button button--outline" type="button" data-dash-goto="sec-bookings">Ask for help <svg class="icon" aria-hidden="true"><use href="#i-arrowRight"></use></svg></button>
+            </div>
+          </div>
+
+          <div class="dash-grid dash-grid--sidebar">
+            <section class="panel" aria-labelledby="checklist-title" data-checklist>
+              <div class="panel-head"><div><h3 id="checklist-title">Spring checklist</h3><p>Mid-March · your garden</p></div><button class="dash-filter" type="button" data-check-reset>Reset</button></div>
+              <div class="checklist-progress" style="margin-bottom:.8rem">
+                <div class="meter"><div class="meter-head"><span>Completed this week</span><b class="checklist-count" data-check-count>0 / 7</b></div><div class="meter-track"><span class="meter-fill" data-check-fill style="width:0"></span></div></div>
+              </div>
+              <div class="checklist">
+                <label class="check-item"><input type="checkbox" data-check> <span>Cut back last year's perennials and leave the stems in a quiet corner.</span></label>
+                <label class="check-item"><input type="checkbox" data-check> <span>Feed the roses and mulch the walled garden while the soil is damp.</span></label>
+                <label class="check-item"><input type="checkbox" data-check> <span>Deadhead the daffodils but leave the foliage for six weeks.</span></label>
+                <label class="check-item"><input type="checkbox" data-check> <span>Check the irrigation timer and clean the filters after winter.</span></label>
+                <label class="check-item"><input type="checkbox" data-check> <span>Sow the first salad and radish in the glasshouse beds.</span></label>
+                <label class="check-item"><input type="checkbox" data-check> <span>Top up the bird bath and keep the feeder clean.</span></label>
+                <label class="check-item"><input type="checkbox" data-check> <span>Walk the meadow and mark any self-sown seedlings to keep.</span></label>
+              </div>
+            </section>
+
+            <section class="panel" aria-labelledby="care-tips-title">
+              <div class="panel-head"><div><h3 id="care-tips-title">Your garden this week</h3><p>From the studio notes</p></div></div>
+              <div class="tip-list">
+                <div class="tip tip--gold"><i><svg class="icon" aria-hidden="true"><use href="#i-sun"></use></svg></i><div><b>Sun, then showers</b><p>Perfect planting weather. The new salvia will settle without much watering.</p></div></div>
+                <div class="tip"><i><svg class="icon" aria-hidden="true"><use href="#i-droplet"></use></svg></i><div><b>Keep an eye on the pots</b><p>Sheltered containers dry out faster than the borders in a warm wind.</p></div></div>
+                <div class="tip"><i><svg class="icon" aria-hidden="true"><use href="#i-flower"></use></svg></i><div><b>Hellebores are setting seed</b><p>Leave a few to self-sow by the path. The rest can be tidied.</p></div></div>
+              </div>
+            </section>
+          </div>
+
+          <div class="dash-grid dash-grid--3">
+            <section class="panel"><div class="panel-head"><div><h3>March</h3><p>The garden wakes</p></div><span class="badge badge--gold">Now</span></div><div class="tip-list"><div class="tip"><i><svg class="icon" aria-hidden="true"><use href="#i-sprout"></use></svg></i><div><b>Border edit</b><p>Cut, divide, feed and mulch before growth takes off.</p></div></div></div></section>
+            <section class="panel"><div class="panel-head"><div><h3>April</h3><p>Planting window</p></div></div><div class="tip-list"><div class="tip"><i><svg class="icon" aria-hidden="true"><use href="#i-flower"></use></svg></i><div><b>New perennials</b><p>Plant after the last frost; water twice a week.</p></div></div></div></section>
+            <section class="panel"><div class="panel-head"><div><h3>May</h3><p>The long evenings</p></div></div><div class="tip-list"><div class="tip"><i><svg class="icon" aria-hidden="true"><use href="#i-scissors"></use></svg></i><div><b>Stake &amp; tie</b><p>Get supports in early, before the border fills out.</p></div></div></div></section>
+          </div>
+        </section>
+
+        <!-- ================= SETTINGS ================= -->
+        <section class="dash-section" id="sec-settings" aria-labelledby="settings-title">
+          <div class="dash-page-head">
+            <div>
+              <span class="eyebrow">Your account</span>
+              <h1 id="settings-title">Settings &amp; <em>preferences.</em></h1>
+              <p>Your details, how we reach you, and the garden information the studio keeps on file.</p>
+            </div>
+            <div class="dash-head-actions">
+              <button class="button button--outline" type="button" data-logout>Sign out <svg class="icon" aria-hidden="true"><use href="#i-logOut"></use></svg></button>
+            </div>
+          </div>
+
+          <div class="settings-grid">
+            <section class="settings-card" aria-labelledby="profile-title">
+              <h3 id="profile-title">Your details</h3>
+              <p>The name and contact details on your account.</p>
+              <form class="settings-form" data-dash-save-form>
+                <div class="field"><label class="form-label" for="customer-name">Full name</label><input class="input" id="customer-name" name="name" type="text" value="Garden Client" autocomplete="name"></div>
+                <div class="field"><label class="form-label" for="customer-email">Email address</label><input class="input" id="customer-email" name="email" type="email" value="customer@stackly.demo" autocomplete="email"></div>
+                <div class="field"><label class="form-label" for="customer-phone">Phone</label><input class="input" id="customer-phone" name="phone" type="tel" value="555 014 2208" autocomplete="tel"></div>
+                <button class="button button--dark" type="submit">Save details</button>
+              </form>
+            </section>
+
+            <section class="settings-card" aria-labelledby="garden-settings-title">
+              <h3 id="garden-settings-title">Garden record</h3>
+              <p>Help us keep the garden file accurate.</p>
+              <form class="settings-form" data-dash-save-form>
+                <div class="field"><label class="form-label" for="customer-garden">Garden name</label><input class="input" id="customer-garden" name="garden" type="text" value="The Willow House"></div>
+                <div class="field"><label class="form-label" for="customer-access">Access notes</label><textarea class="textarea" id="customer-access" name="access">Park on the gravel drive; the east gate is open on visit days.</textarea></div>
+                <div class="field"><label class="form-label" for="customer-visit-time">Preferred visit time</label><select class="panel-select" id="customer-visit-time" name="time" style="width:100%"><option>Mornings · 8–11 am</option><option>Midday · 11 am–2 pm</option><option>Afternoons · 2–5 pm</option><option>No preference</option></select></div>
+                <button class="button button--dark" type="submit">Save garden record</button>
+              </form>
+            </section>
+
+            <section class="settings-card" aria-labelledby="contact-prefs-title">
+              <h3 id="contact-prefs-title">How we reach you</h3>
+              <p>Choose what lands in your inbox.</p>
+              <div class="toggle-row"><input type="checkbox" id="pref-visit" checked><div><label for="pref-visit"><b>Visit reminders</b><span>The day before each garden visit.</span></label></div></div>
+              <div class="toggle-row"><input type="checkbox" id="pref-notes" checked><div><label for="pref-notes"><b>Garden notes</b><span>Photos and notes after each care visit.</span></label></div></div>
+              <div class="toggle-row"><input type="checkbox" id="pref-invoice"><div><label for="pref-invoice"><b>Invoice alerts</b><span>A quiet reminder when a payment is due.</span></label></div></div>
+              <div class="toggle-row"><input type="checkbox" id="pref-seasonal" checked><div><label for="pref-seasonal"><b>The Seasonal Edit</b><span>One planting letter each month.</span></label></div></div>
+            </section>
+
+            <section class="settings-card" aria-labelledby="account-security-title">
+              <h3 id="account-security-title">Account security</h3>
+              <p>Demo access only. Choose a strong, unique password.</p>
+              <form class="settings-form" data-dash-save-form>
+                <div class="field"><label class="form-label" for="customer-current">Current password</label><input class="input" id="customer-current" name="current" type="password" placeholder="••••••••" autocomplete="current-password"></div>
+                <div class="field"><label class="form-label" for="customer-new">New password</label><input class="input" id="customer-new" name="new" type="password" placeholder="At least 8 characters" autocomplete="new-password"></div>
+                <button class="button button--outline" type="submit">Update password</button>
+              </form>
+              <div class="dash-note" style="margin-top:.8rem"><svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg><span>Never use a real password on a demonstration site.</span></div>
+            </section>
+          </div>
+
+          <section class="panel" style="margin-top:1rem" aria-labelledby="download-title">
+            <div class="panel-head"><div><h3 id="download-title">Your garden file</h3><p>Planting records, care notes and invoices.</p></div></div>
+            <div class="button-row">
+              <button class="button button--outline" type="button" data-dash-404>Download garden record</button>
+              <button class="button button--outline" type="button" data-dash-404>Request account deletion</button>
+            </div>
+          </section>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="assets/js/site.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>
